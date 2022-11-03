@@ -1,20 +1,28 @@
-from sys import stdin
+import sys
+from math import gcd
 
-N = int(stdin.readline()) # 가로수 수
-garosu = [] # 가로수 리스트
-space = [] # 가로수 사이의 간격 리스트
-gap = 0 # 가로수 사이의 최소 간격
-result = 0 # 결과값
+# 이미 심어져 있는 가로수 수
+N = int(sys.stdin.readline())
 
-for i in range(N):
-    garosu.append(int(stdin.readline())) # 가로수 수만큼 입력받아 리스트에 저장
+# 첫 가로수 위치
+a = int(sys.stdin.readline())
 
-for j in range(1,N):
-    space.append(garosu[j]-garosu[j-1]) # 가로수 사이 간격 계산
-gap = min(space)
+# 가로수들 사이의 값을 저장할 배열
+arr = []
 
-for i in range(garosu[0], garosu[N-1]+1, gap):
-    if i not in garosu:
-        result += 1
+# 가로수들 사이의 간격 저장
+for i in range(N-1):
+    num = int(sys.stdin.readline())
+    arr.append(num - a)
+    a = num
 
+# arr에 들어있는 모든 수들의 최대공약수 찾기
+g = arr[0]
+for j in range(1, len(arr)):
+    g = gcd(g, arr[j])
+
+# 둘 사이에 심을 가로수 개수: 간격 // 최대공약수 - 1
+result = 0
+for each in arr:
+    result += each // g - 1
 print(result)
