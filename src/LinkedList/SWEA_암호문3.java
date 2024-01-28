@@ -3,9 +3,6 @@ package LinkedList;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 class Node{
@@ -58,13 +55,11 @@ public class SWEA_암호문3 {
         Node startNode = null;
         Node deleteNode = head;
 
-        System.out.println("deleteNode");
-
         for(int i = 0; i < x + y - 1; i++){
             if(deleteNode.next != null)
                 deleteNode = deleteNode.next;
 
-            if(i == x){
+            if(i == x - 2){
                 startNode = deleteNode;
             }
         }
@@ -73,6 +68,27 @@ public class SWEA_암호문3 {
         deleteNode.next = null;
     }
     // 추가
+    // y: 맨 뒤에 y개의 암호문을 덧붙인다
+    // s: 암호문
+    public static void addNode(int y, String[] s){
+        Node curNode = head;
+
+        while(true){
+            if(curNode.next != null) {
+                curNode = curNode.next;
+            }else {
+                break;
+            }
+        }
+
+        for(int i = 0; i < y; i++){
+            Node newNode = new Node(Integer.parseInt(s[i]));
+
+            curNode.next = newNode;
+            curNode = newNode;
+        }
+
+    }
 
 
     public static void main(String[] args) throws IOException {
@@ -111,8 +127,9 @@ public class SWEA_암호문3 {
 
 
             while(curCommandCount < commandCount){
-                String command = st.nextToken();
-                System.out.println("command: " + command);
+                String command = null;
+                command = st.nextToken();
+
                 if(command.equals("I")){
                     int x = Integer.parseInt(st.nextToken());
                     int y = Integer.parseInt(st.nextToken());
@@ -122,43 +139,51 @@ public class SWEA_암호문3 {
                         s[i] = st.nextToken();
                     }
 
-                    System.out.println(" x:" + x);
-                    System.out.println(" y:" + y);
-                    System.out.println(" s:" + Arrays.toString(s));
-
                     insertNode(x, y, s);
 
                     curCommandCount++;
                     len += y;
+
                 } else if (command.equals("D")) {
                     int x = Integer.parseInt(st.nextToken());
                     int y = Integer.parseInt(st.nextToken());
 
-                    System.out.println(" x:" + x);
-                    System.out.println(" y:" + y);
-
                     deleteNode(x, y);
 
-                    commandCount++;
+                    curCommandCount++;
                     len -= y;
-                } else {
 
+                } else {
+                    int y = Integer.parseInt(st.nextToken());
+                    String[] s = new String[y];
+
+                    for(int i = 0; i < y; i++){
+                        s[i] = st.nextToken();
+                    }
+
+                    addNode(y, s);
+
+                    curCommandCount++;
+                    len += y;
                 }
             }
 
 
 
-            System.out.print("#" + tc);
+            System.out.print("#" + tc++);
 
             Node newNode = head;
-            while(true){
+            int check = 0;
+            while(check < 10){
                 System.out.print(" " + newNode.data);
+                check++;
+
                 if(newNode.next != null)
                     newNode = newNode.next;
                 else
                     break;
             }
-            System.out.println(" len: " + len);
+            System.out.println();
         }
     }
 }
