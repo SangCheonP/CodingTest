@@ -1,15 +1,10 @@
 package LinkedList;
 
-import Imple.SWEA_11315;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 // Node
 class ListNode{
-    private int data;
+    public int data;
     public ListNode next;
 
     public ListNode(){
@@ -29,49 +24,140 @@ class ListNode{
 
 public class SWEA_수열편집 {
     // LinkedList
-    private ListNode head;
-    private ListNode tail;
+    private static ListNode head;
+    private static int len = 0;
 
     public SWEA_수열편집(){
         this.head = null;
-        this.tail = null;
     }
 
-    // 중간에 삽입
-    public void insertNode(ListNode preNode, int data){
-        ListNode newNode = new ListNode(preNode.next, data);
-
-        preNode.next = newNode;
-    }
-
-    // 마지막에 삽입
-    public void insertNode(int data){
+    // 삽입
+    public static void insertNode(int insertNodeIdx, int data){
         ListNode newNode = new ListNode(data);
 
-        // 데이터가 없으면
-        if(this.head == null){
-            this.head = newNode;
-        }else{ // 데이터가 있으면
-
+        // 길이 체크로 하는 것이 중요
+        if(len == 0){
+            head = newNode;
+        }else{
             ListNode tmpNode = head;
 
-            // 마지막 노드 까지 검색
-            while(tmpNode.next != null){
+            int curIdx = 1;
+
+            while(curIdx < insertNodeIdx){
                 tmpNode = tmpNode.next;
+                curIdx++;
             }
 
-            // 마지막 노드에 추가
+            newNode.next = tmpNode.next;
             tmpNode.next = newNode;
         }
-        // tail 업데이트
-        this.tail = newNode;
+
+        len++;
     }
 
-    // 중간 노드 삭제
+    // 삭제
+    public static void deleteNode(int deleteNodeIdx){
 
+        ListNode tmpNode = head;
 
-    // 마지막 노드 삭제
+        int curIdx = 1;
 
+        while(curIdx < deleteNodeIdx){
+            tmpNode = tmpNode.next;
+            curIdx++;
+        }
 
-    // 노드 탐색
+        if(tmpNode.next.next != null)
+            tmpNode.next = tmpNode.next.next;
+        else
+            tmpNode.next = null;
+
+        len--;
+    }
+
+    // 교환
+    public static void changeNode(int nodeIdx, int data){
+        ListNode tmpNode = head;
+
+        int curIdx = 0;
+
+        while(curIdx < nodeIdx){
+            tmpNode = tmpNode.next;
+            curIdx++;
+        }
+
+        tmpNode.data = data;
+    }
+
+    // 탐색
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+
+         int tc = sc.nextInt();
+
+         for(int i = 1; i <= tc; i++){
+             head = null;
+             len = 0;
+
+             int N = sc.nextInt(); // 수열의 길이
+             int M = sc.nextInt(); // 추가 횟수
+             int L = sc.nextInt(); // 출력할 인덱스 번호
+
+             len += N;
+
+             // 수열 입력 받아 Linked List 생성
+             for(int j = 0; j < N; j++){
+                 if(head != null){
+                     ListNode newNode = new ListNode(sc.nextInt());
+                     ListNode tmpNode = head;
+
+                     while(tmpNode.next != null){
+                         tmpNode = tmpNode.next;
+                     }
+
+                     tmpNode.next = newNode;
+
+                 }else{
+                     head = new ListNode(sc.nextInt());
+                 }
+             }
+
+             // 명령어 입력받음
+             for(int j = 0; j < M; j++){
+                 String command = sc.next();
+
+                 if(command.equals("I")){
+                     insertNode(sc.nextInt(), sc.nextInt());
+
+                 }else if(command.equals("D")){
+                     deleteNode(sc.nextInt());
+
+                 }else{
+                     changeNode(sc.nextInt(), sc.nextInt());
+
+                 }
+             }
+
+             ListNode printNode = head;
+             int curIdx = 0;
+
+             System.out.print("#" + i);
+             if(len - 1 < L){
+                 System.out.println(" " + -1);
+                 continue;
+             }
+             while(true){
+                 if(curIdx != L && printNode.next != null){
+                     printNode = printNode.next;
+                     curIdx++;
+                 }else if(curIdx == L){
+                     System.out.println(" " + printNode.data);
+                     break;
+                 }else{
+                     System.out.println(" " + -1);
+                     break;
+                 }
+             }
+         }
+    }
 }
