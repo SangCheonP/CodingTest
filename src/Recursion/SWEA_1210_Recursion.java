@@ -2,7 +2,7 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class SWEA_1210 {
+public class SWEA_1210_Recursion {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
