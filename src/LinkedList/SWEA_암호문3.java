@@ -30,7 +30,7 @@ public class SWEA_암호문3 {
     public static void insertNode(int x, int y, String[] s){
         Node curNode = head;
 
-        for(int i = 0; i < x - 1; i++){
+        for(int i = 0; i < x - 1 ; i++){
             curNode = curNode.next;
         }
 
@@ -55,17 +55,19 @@ public class SWEA_암호문3 {
         Node startNode = null;
         Node deleteNode = head;
 
-        for(int i = 0; i < x + y - 1; i++){
-            if(deleteNode.next != null)
-                deleteNode = deleteNode.next;
+        for(int i = 0; i < x + y; i++){
+            if(i == x + y - 1){
+                if(deleteNode.next == null){
+                    startNode.next = null;
+                }else{
+                    startNode.next = deleteNode.next;
+                }
 
-            if(i == x - 2){
+            } else if(i == x -1){
                 startNode = deleteNode;
             }
+            deleteNode = deleteNode.next;
         }
-
-        startNode.next = deleteNode.next;
-        deleteNode.next = null;
     }
     // 추가
     // y: 맨 뒤에 y개의 암호문을 덧붙인다
