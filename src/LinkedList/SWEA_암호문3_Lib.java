@@ -36,7 +36,8 @@ public class SWEA_암호문3_Lib {
                     int y = Integer.parseInt(st.nextToken());
 
                     for(int i = 0; i < y; i++){
-                        wordsArr.add(x++, Integer.parseInt(st.nextToken()));
+                        wordsArr.add(x, Integer.parseInt(st.nextToken()));
+                        x++;
                     }
 
                 }else if(command.equals("D")){

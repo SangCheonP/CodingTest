@@ -1,191 +1,174 @@
 package LinkedList;
 
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-class Node{
-    int data;
-    Node next;
-
-    public Node(int data){
-        this.data = data;
-    }
-
-    public Node(Node next, int data){
-        this.next = next;
-        this.data = data;
-    }
-}
 
 public class SWEA_암호문3 {
-    static Node head = null;
-    static int len = 0;
+    static int NODE_MAX = 5000;
+    static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    // 삽입
-    // x: 앞에서부터 x번째 암호문 바로뒤
-    // y: y개의 암호문 삽입
-    // s: 덧붙일 암호문
-    public static void insertNode(int x, int y, String[] s){
-        Node curNode = head;
+    static class Node {
+        int data;
+        Node next;
 
-        for(int i = 0; i < x - 1 ; i++){
-            curNode = curNode.next;
-        }
-
-        // 나중에 삽입후 연결해야 할 Node
-        Node destNode = curNode.next;
-
-        for(int i = 0; i < y; i++){
-            Node newNode = new Node(Integer.parseInt(s[i]));
-
-            curNode.next = newNode;
-            curNode = curNode.next;
-
-        }
-
-        curNode.next = destNode;
-    }
-    
-    // 삭제
-    // x: 앞에서부 x번째 암호문 바로 다음부터
-    // y: y개의 암호문 삭제
-    public static void deleteNode(int x, int y){
-        Node startNode = null;
-        Node deleteNode = head;
-
-        for(int i = 0; i < x + y; i++){
-            if(i == x + y - 1){
-                if(deleteNode.next == null){
-                    startNode.next = null;
-                }else{
-                    startNode.next = deleteNode.next;
-                }
-
-            } else if(i == x -1){
-                startNode = deleteNode;
-            }
-            deleteNode = deleteNode.next;
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
         }
     }
-    // 추가
-    // y: 맨 뒤에 y개의 암호문을 덧붙인다
-    // s: 암호문
-    public static void addNode(int y, String[] s){
-        Node curNode = head;
 
-        while(true){
-            if(curNode.next != null) {
-                curNode = curNode.next;
-            }else {
-                break;
-            }
-        }
+    static class LinkedList{
+        Node head;
+        Node tail;
+        Node[] nodeArr;
+        int nodeCnt;
 
-        for(int i = 0; i < y; i++){
-            Node newNode = new Node(Integer.parseInt(s[i]));
-
-            curNode.next = newNode;
-            curNode = newNode;
-        }
-
-    }
-
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
-
-        int tc = 1;
-
-        while ((st = new StringTokenizer(br.readLine())) != null) {
-
-            int textCount = Integer.parseInt(st.nextToken());
-            st = new StringTokenizer(br.readLine());
-
+        public LinkedList(){
             head = null;
-            len = textCount;
-
-            Node curNode = head;
-
-            // 원본 암호문 뭉치를 받아 Linked List로 연결
-            for(int i = 0; i < textCount; i++){
-                Node newNode = new Node(Integer.parseInt(st.nextToken()));
-
-                if(head == null){
-                    head = newNode;
-                    curNode = newNode;
-                }else{
-                    curNode.next = newNode;
-                    curNode = newNode;
-                }
-            }
-
-            // 명령어 갯수
-            int commandCount = Integer.parseInt(br.readLine());
-            int curCommandCount = 0;
-            st = new StringTokenizer(br.readLine());
-
-
-            while(curCommandCount < commandCount){
-                String command = null;
-                command = st.nextToken();
-
-                if(command.equals("I")){
-                    int x = Integer.parseInt(st.nextToken());
-                    int y = Integer.parseInt(st.nextToken());
-                    String[] s = new String[y];
-
-                    for(int i = 0; i < y; i++){
-                        s[i] = st.nextToken();
-                    }
-
-                    insertNode(x, y, s);
-
-                    curCommandCount++;
-                    len += y;
-
-                } else if (command.equals("D")) {
-                    int x = Integer.parseInt(st.nextToken());
-                    int y = Integer.parseInt(st.nextToken());
-
-                    deleteNode(x, y);
-
-                    curCommandCount++;
-                    len -= y;
-
-                } else {
-                    int y = Integer.parseInt(st.nextToken());
-                    String[] s = new String[y];
-
-                    for(int i = 0; i < y; i++){
-                        s[i] = st.nextToken();
-                    }
-
-                    addNode(y, s);
-
-                    curCommandCount++;
-                    len += y;
-                }
-            }
-
-
-
-            System.out.print("#" + tc++);
-
-            Node newNode = head;
-            int check = 0;
-            while(check < 10){
-                System.out.print(" " + newNode.data);
-                check++;
-
-                if(newNode.next != null)
-                    newNode = newNode.next;
-                else
-                    break;
-            }
-            System.out.println();
+            nodeArr = new Node[NODE_MAX];
+            nodeCnt = 0;
         }
+
+        Node getNewNode(int data){ // data를 값으로 갖는 새로운 node 생성하고, 생성된 node를 return
+            nodeArr[nodeCnt] = new Node(data);
+            return nodeArr[nodeCnt++];
+        }
+
+        void insert(int idx, int[] nums){ // 앞에서 idx 개 이후에 nums 들을 추가하기
+            int st = 0;
+            if(idx == 0){ // 맨 앞에 붙여야 하는 경우
+                // 먼저, 한개만 추가 후 head 재조정
+                if(head != null){
+                    Node newNode = getNewNode(nums[0]);
+                    newNode.next = head;
+                    head = newNode;
+                }else{
+                    head = getNewNode(nums[0]);
+                }
+
+                // 나음 수들을 head 뒤에 차례로 이어 붙이기
+                idx = 1;
+                st = 1;
+            }
+
+            Node cur = head;
+            // idx개 만큼 이동
+            for(int i = 1; i<idx; i++){
+                cur = cur.next;
+            }
+
+            //nums 추가
+            for(int i = st; i < nums.length; i++){
+                Node newNode = getNewNode(nums[i]);
+                newNode.next = cur.next;
+                cur.next = newNode;
+                cur = newNode;
+            }
+
+            if(cur.next == null){
+                tail = cur;
+            }
+        }
+
+        void delete(int idx, int cnt){ // idx번 인덱스부터 cnt개 만큼 삭제
+            Node cur = head;
+
+            if(idx == 0){ // 맨 앞이 삭제되는 경우 (head 재조정 필요)
+                for(int i=0; i<cnt; i++){
+                    cur = cur.next;
+                }
+                head = cur;
+                return;
+            }
+
+            for(int i = 1; i < idx; i++){
+                cur = cur.next;
+            }
+
+            Node anchor = cur; // 삭제되기 직전 위치 기억하기;
+
+            for(int i = 0; i < cnt; i++){
+                cur = cur.next;
+            }
+
+            anchor.next = cur.next;
+
+            if(anchor.next == null){
+                tail = anchor;
+            }
+        }
+
+        void add(int data){ // 제일 뒤에 data 추가하기
+            Node cur = tail;
+            Node newNode = getNewNode(data);
+            cur.next = newNode;
+            tail = newNode;
+        }
+
+        void print() throws Exception{
+            int cnt = 10;
+            Node cur = head;
+            while(--cnt >= 0){
+                bw.write(cur.data + " ");
+                cur = cur.next;
+            }
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        int T = 10;
+
+        StringTokenizer stk;
+        for (int t = 1; t <= T; t++) {
+            LinkedList list = new LinkedList();
+            bw.write("#");
+            bw.write(t + " ");
+            int N = Integer.parseInt(br.readLine());
+            int[] initArr = new int[N];
+            stk = new StringTokenizer(br.readLine());
+            for (int i = 0; i < N; i++) {
+                initArr[i] = Integer.parseInt(stk.nextToken());
+            }
+            list.insert(0, initArr);
+
+            int M = Integer.parseInt(br.readLine());
+            stk = new StringTokenizer(br.readLine());
+            for (int i = 0; i < M; i++) {
+                char cmd = stk.nextToken().charAt(0);
+                int x, y;
+                switch (cmd) {
+                    case 'I':
+                        x = Integer.parseInt(stk.nextToken());
+                        y = Integer.parseInt(stk.nextToken());
+                        int[] temp = new int[y];
+                        for (int j = 0; j < y; j++) {
+                            temp[j] = Integer.parseInt(stk.nextToken());
+                        }
+                        list.insert(x, temp);
+                        break;
+                    case 'D':
+                        x = Integer.parseInt(stk.nextToken());
+                        y = Integer.parseInt(stk.nextToken());
+                        list.delete(x, y);
+                        break;
+                    case 'A':
+                        y = Integer.parseInt(stk.nextToken());
+                        for (int j = 0; j < y; j++) {
+                            list.add(Integer.parseInt(stk.nextToken()));
+                        }
+                        break;
+                }
+            }
+            list.print();
+            bw.write("\n");
+        }
+        bw.flush();
+        br.close();
+        bw.close();
     }
 }
