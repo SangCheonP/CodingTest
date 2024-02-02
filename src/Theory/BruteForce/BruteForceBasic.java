@@ -29,7 +29,7 @@ public class BruteForceBasic {
 
         for(int i = 0; i < N; i++){
             if(isSelected[i] == true)
-                continue;;
+                continue;
             isSelected[i] = true;
             result[idx] = cards[i];
             perm(idx + 1);
@@ -57,12 +57,16 @@ public class BruteForceBasic {
     
     // 5개중에 3개 뽑은 순서 상관없는 조합 구현 : 태희쌤 버전 반복문 사용 (비중복 조합)
     static void comb1(int idx, int cnt) {
-        for(int i = 0; i < N; i++){
-            for(int j = i + 1; j < N; j++){
-                for(int k = j + 1; k < N; k++){
-                    System.out.println(cards[i] + " " + cards[j] + " " + cards[k]);
-                }
-            }
+        if(cnt == R){
+            System.out.println(Arrays.toString(result));
+            return;
+        }
+        if(idx == N)
+            return;
+
+        for(int i = idx; i < N; i++){
+            result[cnt] = cards[i];
+            comb1(i + 1, cnt + 1);
         }
     }
     
