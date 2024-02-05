@@ -11,36 +11,41 @@ https://www.acmicpc.net/problem/2493
  */
 public class Baek_2493 {
     public static void main(String[] args) throws IOException {
-        long beforeTime = System.currentTimeMillis();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
 
         // top 저장 배열
-        int[] top = new int[N];
+        // idx, high
+        Stack<Integer[]> top = new Stack<>();
+
+        // 저장할 탑의 idx
         int topIdx = -1;
 
         // 결과 저장 배열
         int[] result = new int[N];
 
         for(int curHigh : Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray()){
-
-            top[++topIdx] = curHigh;
-
-            int curIdx = topIdx - 1;
-
-            while(curIdx >= 0){
-                if(top[curIdx] >= top[topIdx]){
-                    result[topIdx] = curIdx + 1;
+            while(true) {
+                // 비어있으면
+                if(top.isEmpty()){
+                    top.add(new Integer[]{++topIdx, curHigh});
+                    result[topIdx] = 0;
                     break;
-                }else {
-                    curIdx--;
+                }
+                // 바로 앞의 높이가 넣을려는 높이보다 낮으면
+                else if (top.peek()[1] < curHigh) {
+                    top.pop();
+                // 존재하고, 바로 앞의 높이가 나보다 크거나 같으면
+                } else {
+                    result[++topIdx] = top.peek()[0] + 1;
+                    top.add(new Integer[]{topIdx, curHigh});
+                    break;
                 }
             }
         }
-        System.out.println(Arrays.toString(result));
-        long afterTime = System.currentTimeMillis();
-        long secDiffTime = (afterTime - beforeTime)/1000;
-        System.out.println("시간차이(m) : "+secDiffTime);
+
+        for(int n : result)
+            System.out.print(n + " ");
     }
 }
