@@ -46,10 +46,8 @@ public class Baek_14502 {
             // 해당 지도에 대해서 bfs 진행
             int tmp = bfs();
 
-            //System.out.println("tmp: " + tmp + ", result: " + result);
             result = Math.max(tmp, result);
 
-            //System.out.println("-------------------------");
             return;
         }
 
@@ -76,8 +74,8 @@ public class Baek_14502 {
         }
     }
 
+    // 안전영역 크기 반환
     public static int bfs(){
-        //System.out.println("bfs");
         queue = new ArrayDeque<>();
         int[][] cpMap = new int[N][M];
         for (int i = 0; i < N; i++) {
@@ -120,13 +118,6 @@ public class Baek_14502 {
                 }
             }
         }
-
-//        for(int i = 0; i < N; i++){
-//            for(int j = 0; j < M; j++){
-//                System.out.print(cpMap[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
 
         return tmp;
     }
