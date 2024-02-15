@@ -1,6 +1,6 @@
 package Graph;
 /*
-SWEA 1238 Contact (D4)
+SWEA 1238 Contact (D4) - Graph, BFS
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15B1cKAKwCFAYD
  */
 
@@ -20,7 +20,7 @@ public class SWEA_1238 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        for (int tc = 1; tc <= 1 ; tc++) {
+        for (int tc = 1; tc <= 10 ; tc++) {
             // len: 데이터의 길이 / str: 시작점
             st = new StringTokenizer(br.readLine());
             len = Integer.parseInt(st.nextToken());
@@ -30,6 +30,7 @@ public class SWEA_1238 {
             map = new boolean[101][101];
             visited = new boolean[101];
 
+            // 시작과 끝 받음
             st = new StringTokenizer(br.readLine());
             for (int l = 0; l < len/2; l++) {
                 int from = Integer.parseInt(st.nextToken());
@@ -38,37 +39,46 @@ public class SWEA_1238 {
             }
 
             queue = new ArrayDeque<>();
-            bfs(str);
 
+            System.out.println("#" + tc + " " + bfs(str));
         }
 
     }
 
-    public static class Point{
-        int str;
-        int ed;
 
-        public Point(int str, int ed){
-            this.str = str;
-            this.ed = ed;
-        }
-    }
-
-    public static void bfs(int str){
-        if(visited[str]){
-            return;
-        }
-
+    public static int bfs(int str){
         // 방문
         queue.offer(str);
         visited[str] = true;
+        
+        int size = 1;
+        int result = 0;
 
-        for (int i = 1; i <= 100 ; i++) {
-            // str -> i로 갈 수 있으면
-            if(map[str][i]){
-                visited[i] = true;
-                queue.offer(i);
+        // queue가 있는 동안
+        while(!queue.isEmpty()){
+            // 바로 옆의 정점들만
+            while (--size >= 0){
+                int cur = queue.poll();
+                result = Math.max(result, cur);
+
+                for (int i = 1; i <= 100 ; i++) {
+                    // str -> i로 갈 수 있고, i를 방문하지 않았다면
+                    if(map[cur][i] && !visited[i]){
+                        visited[i] = true;
+                        queue.offer(i);
+                    }
+                }
+            }
+
+            // 더 진행할 수 있면(자식이 있으면)
+            if(queue.size() != 0){
+                size = queue.size();
+                result = 0;
+            // 리프 노드에 도달했으면
+            }else{
+                return result;
             }
         }
+        return 0;
     }
 }
