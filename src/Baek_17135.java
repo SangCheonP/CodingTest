@@ -6,14 +6,14 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /*
-백준 17135 캐슬 디펜스 (골드3)
+백준 17135 캐슬 디펜스 (골드3) - 조합, BFS
 https://www.acmicpc.net/problem/17135
  */
 public class Baek_17135 {
     public static int N, M, D, result;
     public static boolean[][] map;
-    public static int[] di = {-1, 0, 0};
-    public static int[] dj = {0, -1, 1};
+    public static int[] di = {0, -1, 0};
+    public static int[] dj = {-1, 0, 1};
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -34,6 +34,7 @@ public class Baek_17135 {
         }
         result = 0;
         comb(0, 0);
+        System.out.println(result);
     }
 
     public static void comb(int idx, int cnt){
@@ -46,12 +47,12 @@ public class Baek_17135 {
                 }
             }
 
+            // N번 이동
             for (int i = 0; i < N; i++) {
-                print(cp);
                 // 공격
                 tmp += att(cp);
-                // 이동
-                move(cp);    
+                // 한칸 이동
+                move(cp);
             }
 
             result = Math.max(result, tmp);
@@ -68,66 +69,72 @@ public class Baek_17135 {
 
     }
 
-    public static class Enemy{
+    public static class Point {
         int i;
         int j;
+        // 궁수로부터 거리(공격 가능한 거리 안인지)
+        int dis;
+        // 적이 있는 지 없는지
+        boolean stats;
 
-        public Enemy(int i, int j){
+
+        public Point(int i, int j, boolean stats, int dis){
             this.i = i;
             this.j = j;
+            this.stats = stats;
+            this.dis = dis;
         }
     }
 
     // 공격
     public static int att(boolean[][] cp){
         boolean[][] selectEm = new boolean[N][M];
-        Queue<Enemy> queue = new ArrayDeque<>();
-        int size = 0, curDis = 0, tmp = 0;
-
-        System.out.println("att");
-
-        // 궁수가 있는 줄에서
+        int dis = 0;
+        Queue<Point> queue;
+        int tmp = 0;
+        // 궁수 3명이 한 턴에 잡을 수 있는 적의 수 리턴
         for (int j = 0; j < M; j++) {
-            // 궁수마다, 해당 위치에서 BFS 진행
+            // 궁수가 서 있으면
             if(cp[N][j] == true){
-                queue.offer(new Enemy(N-1, j));
 
-                size = queue.size();
+                // 공격 거리 D까지 BFS 진행
+                queue = new ArrayDeque<>();
+                dis = 1;
 
-                out: while (!queue.isEmpty()){
-                    while (--size >= 0 && ++curDis <= D){
-                        Enemy cur = queue.poll();
-                        // 해당 위치에 적이 있으면
-                        if(cp[cur.i][cur.j]){
-                            // 그 위치 적을 선택 표시
-                            if(!selectEm[cur.i][cur.j]){
-                                selectEm[cur.i][cur.j] = true;
-                                tmp += 1;
-                                break out;
-                            }
+                queue.offer(new Point(N-1, j, cp[N-1][j], dis));
 
-                        // 적이 없으면
-                        }else {
-                            for (int d = 0; d < 3; d++) {
-                                int ni = cur.i + di[d];
-                                int nj = cur.j + dj[d];
+                while (!queue.isEmpty()){
+                    Point cur = queue.poll();
 
-                                if(0 <= ni && ni < N && 0 <= nj && nj < M){
-                                    queue.offer(new Enemy(ni, nj));
-                                }
-                            }
+                    // 적이 있고, 공격 사거리 안이면
+                    if(cur.stats && cur.dis <= D){
+                        // 해당 적이 선택이 안 되었을 때
+                        if(!selectEm[cur.i][cur.j]) {
+                            // 해당 적 표시
+                            selectEm[cur.i][cur.j] = true;
+                            tmp += 1;
                         }
+                        break;
                     }
 
-                    size = queue.size();
+                    // 3방향 동안
+                    for (int d = 0; d < 3; d++) {
+                        int ni = cur.i + di[d];
+                        int nj = cur.j + dj[d];
+
+                        if(0 <= ni && ni < N && 0 <= nj && nj < M && cur.dis+1 <= D){
+                            queue.offer(new Point(ni, nj, cp[ni][nj], cur.dis+1));
+                        }
+                    }
                 }
             }
         }
-        // 선택한 적 제거
-        for (int z = 0; z < N; z++) {
-            for (int x = 0; x < M; x++) {
-                if(selectEm[z][x])
-                    map[z][x] = false;
+
+        // 선택한 적 cp에 업데이트
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                if(selectEm[i][j])
+                    cp[i][j] = false;
             }
         }
         return tmp;
@@ -135,7 +142,6 @@ public class Baek_17135 {
 
     // 적들 아래로 한 칸 이동
     public static void move(boolean[][] cp){
-        System.out.println("move");
         for (int i = N-1; i >= 1 ; i--) {
             for (int j = 0; j < M; j++) {
                 cp[i][j] = cp[i-1][j];
@@ -144,15 +150,5 @@ public class Baek_17135 {
         for (int j = 0; j < M; j++) {
             cp[0][j] = false;
         }
-    }
-
-    public static void print(boolean[][] cp){
-        for (int i = 0; i < N+1; i++) {
-            for (int j = 0; j < M; j++) {
-                System.out.print(cp[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("-------------");
     }
 }
