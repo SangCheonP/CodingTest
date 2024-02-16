@@ -1,10 +1,14 @@
 package Imple;
+/*
+백준 2615 오목(실버1)
+https://www.acmicpc.net/problem/2615
+ */
 
 import java.util.Scanner;
 
 import static java.lang.System.exit;
 
-public class Baek_2615 {
+public class Baek_2615_오목 {
     static int[][] map = new int[19][19];
     //                 →  ↓  ↘  ↗
     static int[] di = {0, 1, 1, -1};
