@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 /*
-백준 16236 아기 상어(골드3)
+백준 16236 아기 상어(골드3) - BFS, PriorityQueue, Queue
 https://www.acmicpc.net/problem/16236
  */
 public class Baek_16236_아기상어 {
