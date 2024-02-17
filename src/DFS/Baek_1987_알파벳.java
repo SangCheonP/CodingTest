@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class Baek_1987 {
+public class Baek_1987_알파벳 {
     public static int R, C, result;
     public static char[][] map;
     public static int[] di = {-1, 1, 0, 0};
