@@ -9,7 +9,7 @@ import java.util.Arrays;
 SWEA 1210 Ladder1 (D4)
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh
  */
-public class SWEA_1210_2 {
+public class SWEA_1210_Ladder1_2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[][] map;
