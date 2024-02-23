@@ -97,7 +97,7 @@ public class SWEA_1251_하나로 {
 
             for (int i = 0; i < N; i++) {
                 for (int j = i+1; j < N; j++) {
-                    edges.add(new Edge(new Point(x[i], y[i]), new Point(x[j], y[j]), Math.round(Math.sqrt(Math.pow(x[i]-x[j], 2) + Math.pow(y[i]-y[j], 2)))));
+                    edges.add(new Edge(new Point(x[i], y[i]), new Point(x[j], y[j]), Math.round(Math.pow(x[i]-x[j], 2) + Math.pow(y[i]-y[j], 2))));
                 }
             }
 
@@ -108,52 +108,58 @@ public class SWEA_1251_하나로 {
             int cnt = 0;
             double result = 0;
 
-//            for (Edge e: edges){
-//                if(find_res(e.p1) != find_res(e.p2)){
-//                    result += e.dis;
-//                    cnt += 1;
-//
-//                    union(e.p1, e.p2);
-//
-//                    if(cnt == N -1)
-//                        break;
-//                }
-//            }
-        }
+            for (Edge e: edges){
+                int i1 = find_idx(e.p1);
+                int i2 = find_idx(e.p2);
 
+                if(find_res(i1) != find_res(i2)){
+                    result += e.dis;
+                    cnt += 1;
+
+                    union(i1, i2);
+
+                    if(cnt == N -1)
+                        break;
+                }
+            }
+
+            System.out.println("#" + tc + " " + (long)result);
+        }
+    }
+
+    static int find_idx(Point point){
+        for (int i = 0; i < N; i++) {
+            if(point.x == x[i] && point.y == y[i])
+                return i;
+        }
+        return 0;
     }
 
     static void makeSet(){
         parent = new int[N];
         for (int i = 0; i < N; i++) {
             parent[i] = i;
-            //System.out.println("i: " + i + ", point: " + find_idx(new Point(x[i], y[i])));
         }
-        //System.out.println(Arrays.toString(parent));
     }
 
-//    static boolean union(Point p1, Point p2){
-//        int i1 = find_idx(p1.x, p1.y);
-//        int i2 = find_idx(p2.x, p2.y);
-//
-//        parent[i2] = i1;
-//
-//
-//    }
-
-    static int find_res(Point p){
-        int i = find_idx(p.x, p.y);
-        if(p.x == x[i] && p.y == y[i])
-            return i;
-
-        return parent[i] = find_res();
+    static int find_res(int x){
+        if(x != parent[x]){
+            return parent[x] = find_res(parent[x]);
+        }
+        return x;
     }
 
-    static int find_idx(double a, double b){
-        for (int i = 0; i < N; i++) {
-            if(a == x[i] && b == y[i])
-                return i;
-        }
-        return 0;
+    static boolean union(int x, int y){
+        int x_res = find_res(x);
+        int y_res = find_res(y);
+
+        // 같은 집합이면
+        if(x_res == y_res)
+            return false;
+
+        parent[y_res] = x_res;
+
+        return true;
     }
 }
+
