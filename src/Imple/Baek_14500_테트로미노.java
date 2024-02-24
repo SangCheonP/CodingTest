@@ -1,3 +1,5 @@
+package Imple;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,7 +28,7 @@ public class Baek_14500_테트로미노 {
                                         {new Point(0, 0), new Point(0, 1), new Point(1, 0), new Point(2, 0)}
                                         };
 
-    public static Point[][] model3_2 = {{new Point(0, 0), new Point(1, 0), new Point(1, 1), new Point(1, 2)},
+    public static Point[][] model3_2 = {{new Point(0, 0), new Point(1, 0), new Point(0, 1), new Point(0, 2)},
             {new Point(1, 0), new Point(1, 1), new Point(1, 2), new Point(0, 2)},
             {new Point(0, 0), new Point(1, 0), new Point(1, 1), new Point(1, 2)},
             {new Point(0, 0), new Point(0, 1), new Point(0, 2), new Point(1, 2)}
