@@ -8,6 +8,7 @@
  - 1861 - 정사각형 방 (DFS/BFS, DP)
  - 1231 - 중위 순회 (Tree, DFS)
  - 1248 - 공통 조상 (Tree)
+ - 1767 - 프로세스 연결하기 (BackTracking)
 
 ### Baek
  - 2615 - 오목 (구현, BFS)
