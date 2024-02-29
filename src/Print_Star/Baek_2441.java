@@ -11,8 +11,8 @@ public class Baek_2441 {
         String clear = " ";
 
         for (int i = 0; i < n; i++) {
-            System.out.print(clear.repeat(i));
-            System.out.print(star.repeat(n - i));
+            //System.out.print(clear.repeat(i));
+            //System.out.print(star.repeat(n - i));
             System.out.println();
         }
     }

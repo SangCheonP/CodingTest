@@ -12,14 +12,14 @@ public class Baek_2446 {
         String clear = " ";
 
         for(int i = 0; i < n; i++){
-            System.out.print(clear.repeat(i));
-            System.out.println(star.repeat(2 * (n - i) - 1));
+            //System.out.print(clear.repeat(i));
+            //System.out.println(star.repeat(2 * (n - i) - 1));
         }
 
         for(int i = n - 2; i >= 0; i--){
             int tmp = n;
-            System.out.print(clear.repeat(i));
-            System.out.println(star.repeat(2 * (tmp - i) - 1));
+            //System.out.print(clear.repeat(i));
+            //System.out.println(star.repeat(2 * (tmp - i) - 1));
         }
     }
 }

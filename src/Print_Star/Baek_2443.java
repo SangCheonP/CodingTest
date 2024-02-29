@@ -12,8 +12,8 @@ public class Baek_2443 {
 
         for (int i = n; i > 0; i--) {
             int tmp = n;
-            System.out.print(clear.repeat(tmp - i));
-            System.out.print(star.repeat(2 * i - 1));
+            //System.out.print(clear.repeat(tmp - i));
+            //System.out.print(star.repeat(2 * i - 1));
             System.out.println();
         }
     }
