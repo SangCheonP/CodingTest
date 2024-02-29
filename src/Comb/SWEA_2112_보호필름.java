@@ -59,19 +59,20 @@ public class SWEA_2112_보호필름 {
     }
 
     static void comb(int idx, int cnt, int curCnt){
-        if(idx == D)
-            return;
-        
         if(curCnt == cnt && check()){
             result = Math.min(result, curCnt);
             canMake = true;
             return;
         }
+        if(idx == D)
+            return;
 
         int[] tmp = film[idx];
 
+        // 약품 주입 안함
         comb(idx+1, cnt, curCnt);
 
+        // 약품 주입
         film[idx] = all0;
         comb(idx+1, cnt, curCnt+1);
         film[idx] = all1;
@@ -81,26 +82,25 @@ public class SWEA_2112_보호필름 {
     }
     
     static boolean check(){
-        int checkCnt = 0;
         for (int j = 0; j < W; j++) {
-            int checkK = 1;
+            int cnt = 1;
             for (int i = 0; i < D - 1; i++) {
+                // 아래것과 같으면
                 if(film[i][j] == film[i+1][j]){
-                    checkK += 1;
-                    if(checkK == K){
-                        checkCnt += 1;
-                        break;
-                    }
+                    cnt += 1;
                 }else{
-                    checkK = 1;
+                    cnt = 1;
+                }
+                // 해당 라인 조건에 만족하면
+                if(cnt == K){
+                    break;
                 }
             }
-            if(checkK < K){
+            // 만족하지 않으면
+            if(cnt < K){
                 return false;
             }
         }
-        if(checkCnt == W)
-            return true;
-        return false;
+        return true;
     }
 }
