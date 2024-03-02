@@ -15,6 +15,17 @@ import java.util.StringTokenizer;
 7 6 3 1 0
 
 output: 10
+
+7
+0 32 31 0 0 60 51
+32 0 21 0 0 0 0
+31 21 0 0 46 0 25
+0 0 0 0 34 18 0
+0 0 46 34 0 40 51
+60 0 0 18 40 0 0
+51 0 25 0 51 0 0
+
+output==>175
  */
 public class PrimTest {
     public static void main(String[] args) throws IOException {
@@ -50,16 +61,16 @@ public class PrimTest {
         for (c = 0; c < V; c++) {
             
             // step 1: 비트리 정점 중 최소간선비용 정점 찾기
+            // 확장 포인트
             int min = Integer.MAX_VALUE;
             int minVertex = -1;
 
             for (int i = 0; i < V; i++) {
-                // 비트리 정점 +
+                // 비트리 정점 + 최소 간선 비용
                 if(!visited[i] && minEdge[i] < min){
                     min = minEdge[i];
                     minVertex = i;
                 }
-
             }
             
             if(minVertex == -1) break; // 찾지 못했으면
@@ -68,9 +79,9 @@ public class PrimTest {
             visited[minVertex] = true; // 트리 정점에 포함
 
 
-            // step 2: 새롭게 트리 정점에 확장된 정점 기준으로 비트리 정점들과의 간선비용 고려 최적 업데이트
+            // step 2: 새롭게 트리 정점에 확장된 정점 기준으로 비트리 정점들과의 간선비용 업데이트
             for (int i = 0; i < V; i++) {
-                // 비트리 정점 + minVertex랑 인접(자기자신X) + i의 최소 가중치보다 작으면
+                // 비트리 정점 + minVertex(확장된 정점)과 인접(자기자신X) + 기존 정점에서 가는 가중치보다 작으면
                 if(!visited[i] && adjMatrix[minVertex][i] != 0
                     && adjMatrix[minVertex][i] < minEdge[i]){
                     // 갱신

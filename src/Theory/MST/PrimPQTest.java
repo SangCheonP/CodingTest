@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class PQTest {
+public class PrimPQTest {
 
     static class Vertex implements Comparable<Vertex>{
         int no, weight;
