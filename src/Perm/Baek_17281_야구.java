@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /*
-백준 17281 야구(골드4)
+백준 17281 야구(골드4) - 순열
 https://www.acmicpc.net/problem/17281
  */
 public class Baek_17281_야구 {
