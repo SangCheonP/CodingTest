@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class Baek_2239_스도쿠 {
     public static int[][] map = new int[9][9];
     public static int N = 9;
-    public static boolean fin = false;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -16,83 +15,68 @@ public class Baek_2239_스도쿠 {
             map[i] = Arrays.stream(br.readLine().split("")).mapToInt(Integer::parseInt).toArray();
         }
 
-        out:for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                if(map[i][j] != 0)
-                    continue;
-
-                backTracking(i, j);
-
-                break out;
-            }
-        }
-
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
-                System.out.print(map[i][j]);
-            }
-            System.out.println();
-        }
+        sodoku();
     }
-    // 1 ~ 9
-    // 행 체크 
-    // 열 체크
-    // 작은 사각형 체크
-    // 
     
-    
-    public static void backTracking(int i, int j){
-        ckEnd();
+    // 게임 시작
+    public static void sodoku(){
+        int[] idx = findZeroIdx();
 
-        if(fin){
-            return;
+        if(idx[0] == -1){
+            printSdoku();
+            System.exit(0);
         }
 
-        out: for(int num = 1; num <= 9; num++){
-            // 행 체크
-            for(int x = 0; x < N; x++){
-                if(map[i][x] == num)
-                    continue out;
+        for (int num = 1; num <= 9; num++) {
+            if(isValidPosition(idx, num)){
+                map[idx[0]][idx[1]] = num;
+                sodoku();
+                map[idx[0]][idx[1]] = 0;
             }
-
-            // 열 체크
-            for(int y = 0; y < N; y++){
-                if(map[y][j] == num)
-                    continue out;
-            }
-
-            // 3x3 체크
-            for(int y = (i/3*3); y < (i/3*3) + 3; y++){
-                for(int x = (j/3*3); x < (j/3*3)+ 3; x++){
-                    if(map[y][x] == num)
-                        continue out;
-                }
-            }
-
-            // 다 체크했는데 해당 숫자 사용가능 -> 숫자 놓음
-            map[i][j] = num;
-
-            for(int r = 0; r < N; r++){
-                for(int c = 0; c < N; c++){
-                    if(map[r][c] == 0){
-                        System.out.println("여기");
-                        backTracking(r, c);
-                    }
-                }
-            }
-
-            map[i][j] = 0;
         }
+
     }
 
-    public static void ckEnd(){
-        for(int i = 0; i < N; i++){
-            for(int j = 0; j < N; j++){
+    // 0인 위치 반환
+    public static int[] findZeroIdx(){
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 if(map[i][j] == 0){
-                    return;
+                    return new int[]{i, j};
                 }
             }
         }
-        fin = true;
+
+        return new int[]{-1, -1};
+    }
+
+    // 해당 위치에 숫자가 들어갈 수 있나 체크
+    public static boolean isValidPosition(int[] idx, int num){
+        int i = idx[0];
+        int j = idx[1];
+
+        for (int k = 0; k < N; k++) {
+            if(map[i][k] == num || map[k][j] == num) return false;
+        }
+
+        for(int y = (i/3*3); y < (i/3*3) + 3; y++){
+            for(int x = (j/3*3); x < (j/3*3)+ 3; x++){
+                if(map[y][x] == num) return false;
+            }
+        }
+
+        return true;
+    }
+
+    // map 출력
+    public static void printSdoku(){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                sb.append(map[i][j]+"");
+            }
+            sb.append("\n");
+        }
+        System.out.println(sb);
     }
 }
