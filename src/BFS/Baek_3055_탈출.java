@@ -1,5 +1,10 @@
 package BFS;
 
+/**
+ * 백준 3055 탈출(골드4)
+ * https://www.acmicpc.net/problem/3055
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -57,8 +62,8 @@ public class Baek_3055_탈출 {
         boolean canFin = false;
         int cnt = 0;
 
-        while(!canFin){
-            // 물 찰곳 표시
+        while(true){
+            // 물 채우기
             int size = wQue.size();
 
             while(--size >= 0){
@@ -74,16 +79,15 @@ public class Baek_3055_탈출 {
                     }
                 }
             }
-            for (int i = 0; i < R; i++) {
-                for (int j = 0; j < C; j++) {
-                    System.out.print(map[i][j]+" ");
-                }
-                System.out.println();
-            }
-            System.out.println("------------------");
 
             // 고슴도치 이동
             size = sQue.size();
+            
+            // 움직일 수 없으면
+            if(size == 0){
+                break;
+            }
+            
             out:
             while(--size >= 0){
                 Point cur = sQue.poll();
@@ -93,11 +97,13 @@ public class Baek_3055_탈출 {
                     int nj = cur.j + dj[d];
 
                     if(0 <= ni && ni < R && 0 <= nj && nj < C) {
+                        // 도착
                         if(map[ni][nj] == 'D'){
                             canFin = true;
                             result = cnt;
                             break out;
                         }
+                        // 땅이면
                         if(map[ni][nj] == '.'){
                             map[ni][nj] = 'S';
                             sQue.add(new Point(ni, nj));
@@ -105,34 +111,13 @@ public class Baek_3055_탈출 {
                     }
                 }
             }
-            for (int i = 0; i < R; i++) {
-                for (int j = 0; j < C; j++) {
-                    System.out.print(map[i][j]+" ");
-                }
-                System.out.println();
-            }
-            System.out.println("------------------");
-            
-            // 물 채우기
-            size = wQue.size();
-
-            while(--size >= 0){
-                Point cur = wQue.poll();
-                map[cur.i][cur.j] = '*';
-                wQue.add(new Point(cur.i, cur.j));
-            }
-
-
 
             cnt += 1;
 
-            for (int i = 0; i < R; i++) {
-                for (int j = 0; j < C; j++) {
-                    System.out.print(map[i][j]+" ");
-                }
-                System.out.println();
+            if(canFin){
+                result = cnt;
+                return;
             }
-            System.out.println("------------------");
         }
 
     }

@@ -1,109 +1,98 @@
 package BFS;
 
+/**
+ * 백준 9205 맥주 마시면서 걸어가기(골드5)
+ * https://www.acmicpc.net/problem/9205
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
 public class Baek_9205_맥주마시면서걸어가기 {
-    public static int[] di = {-1, 1, 0, 0};
-    public static int[] dj = {0, 0, -1, 1};
-    public static class Point implements Comparable<Point>{
-        int i, j, beerCnt, canMove, dis;
+    public static class Point{
+        int i, j;
         public Point(int i, int j){
             this.i = i;
             this.j = j;
-            this.beerCnt = 20;
-            this.canMove = 0;
-            this.dis = 0;
-        }
-
-        public Point(int i, int j, int beerCnt, int canMove, int dis){
-            this.i = i;
-            this.j = j;
-            this.beerCnt = beerCnt;
-            this.canMove = canMove;
-            this.dis = dis;
-        }
-
-        @Override
-        public int compareTo(Point o){
-            return this.dis - o.dis;
         }
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         StringTokenizer st;
 
         int TC = Integer.parseInt(br.readLine());
-        int martCnt = 0;
-        List<Point> martList;
-        Point start, end;
 
-        for(int tc = 1; tc <= TC; tc++){
-            martList = new ArrayList<>();
-            martCnt = Integer.parseInt(br.readLine());
+        List<Point> pointList; // n+2 개
+        List<List<Integer>> graph; // (n+2)^2개
+        Queue<Integer> queue; // 1개
 
-            st = new StringTokenizer(br.readLine());
-            start = new Point(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
+        while (--TC >= 0){
+            // 좌표 리스트
+            pointList = new ArrayList<>();
 
-            for(int i = 0; i < martCnt; i++){
+            int n = Integer.parseInt(br.readLine());
+
+            for (int i = 0; i < n+2; i++) {
                 st = new StringTokenizer(br.readLine());
-                martList.add(new Point(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
+
+                int x = Integer.parseInt(st.nextToken());
+                int y = Integer.parseInt(st.nextToken());
+
+                pointList.add(new Point(y, x));
             }
 
-            st = new StringTokenizer(br.readLine());
-            end = new Point(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
+            // 인접 리스트 생성
+            graph = new ArrayList<>();
 
-            PriorityQueue<Point> queue = new PriorityQueue<>();
-            queue.add(start);
+            for (int i = 0; i < n+2; i++) {
+                graph.add(new ArrayList<>());
+            }
+
+            // 인접 리스트 초기화 진행
+            for (int i = 0; i < n+2; i++) {
+                for (int j = i+1; j < n+2; j++) {
+                    if(calcDis(pointList.get(i), pointList.get(j)) <= 1000){
+                        graph.get(i).add(j);
+                        graph.get(j).add(i);
+                    }
+                }
+            }
+
+            // bfs 진행
+            queue = new LinkedList<>();
+            // 시작점에서 연결된 모든 정점을 넣음
+            // 방문 체크 배열 - n+2개
+            boolean[] visited = new boolean[pointList.size()];
+            visited[0] = true;
+            queue.offer(0);
+
+            boolean canMake = false;
 
             while(!queue.isEmpty()){
-                Point cur = queue.poll();
-                System.out.println("i: "+cur.i + ", j: " + cur.j);
+                int cur = queue.poll();
 
-                // 골인지점 도착
-                if(cur.i == end.i && cur.j == end.j){
-                    System.out.println("happy");
+                if(cur == pointList.size()-1){
+                    canMake = true;
                     break;
                 }
 
-                // 편의점이면
-                for(Point p : martList){
-                    if(p.i == cur.i && p.j == cur.j){
-                        queue.add(new Point(cur.i, cur.j, 19, 50, dis(cur.i, cur.j, end.i, end.j)));
-                        break;
+                for (int next : graph.get(cur)) {
+                    if(!visited[next]) {
+                        visited[next] = true;
+                        queue.offer(next);
                     }
                 }
 
-                // 맥주를 마셔야 하면
-                if(cur.canMove == 0){
-                    // 맥주가 있으면
-                    if(cur.beerCnt != 0){
-                        queue.add(new Point(cur.i, cur.j, cur.beerCnt-1, 50, dis(cur.i, cur.j, end.i, end.j)));
-                    }
-                    // 맥주가 없으면
-                    else{
-                        System.out.println("sad");
-                        break;
-                    }
-                    
-                // 맥주를 안 마셔도 되면
-                }else{
-                    for(int d = 0; d < 4; d++){
-                        int ni = cur.i + di[d];
-                        int nj = cur.j + dj[d];
-
-                        if(-32768 <= ni && ni <= 32767 && -32768 <= nj && nj <= 32767){
-                            queue.add(new Point(ni, nj, cur.beerCnt, cur.canMove-1, dis(ni, nj, end.i, end.j)));
-                        }
-                    }
-                }
             }
+
+            System.out.println(canMake ? "happy" : "sad");
         }
     }
 
-    public static int dis(int si, int sj, int ei, int ej){
-        return Math.abs(si-ei) + Math.abs(sj-ej);
+    public static int calcDis(Point p1, Point p2){
+        return(Math.abs(p1.i - p2.i) + Math.abs(p1.j - p2.j));
     }
 }
