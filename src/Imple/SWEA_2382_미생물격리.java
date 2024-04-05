@@ -69,8 +69,9 @@ public class SWEA_2382_미생물격리 {
                 micros.add(p);
             }
 
+            Collections.sort(micros);
+
             for (int i = 0; i < M; i++) {
-                Collections.sort(micros);
                 int ni, nj;
                 // 이동
                 for (int j = 0; j < micros.size(); j++) {
@@ -79,38 +80,43 @@ public class SWEA_2382_미생물격리 {
                     ni = p.i + di[p.dir];
                     nj = p.j + dj[p.dir];
 
+                    // 위치 저장
                     p.i = ni;
                     p.j = nj;
                     p.num = p.i * N + p.j;
 
                     // 약 품에 닿으면
-                    if(ni == 0 || ni == N || nj == 0 || nj == N){
+                    if(ni == 0 || ni == N-1 || nj == 0 || nj == N-1){
+                        // 방향 반대로
                         p.dir = chDir(p.dir);
+                        // 개체수 반절로
                         p.cnt /= 2;
                         // 개체수가 0이 되면
                         if(p.cnt == 0){
+                            // 해당 미생물 제거
                             micros.remove(j);
                             j--;
                         }
                     }
                 }
                 
-
+                // 미생물 정렬
+                Collections.sort(micros);
+                
+                // 자기랑 다음 미생물을 모두 비교
                 for (int j = 0; j < micros.size() - 1; j++) {
-                    // 같은 칸에 있으면
+                    // 둘이 같은 위치에 있으면
                     if(micros.get(j).num == micros.get(j+1).num){
+                        // 개체 수가 많은 곳에 함침
                         micros.get(j).cnt += micros.get(j+1).cnt;
+                        // 작은 것은 제거
                         micros.remove(j+1);
                         j--;
                     }
                 }
-
-                for (Point p : micros){
-                    System.out.println(p);
-                }
-                System.out.println("-------------------------");
             }
-
+            
+            // 전체 미생물 수 구하기
             int result = 0;
 
             for (Point p : micros){
