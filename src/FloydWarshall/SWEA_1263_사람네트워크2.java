@@ -1,7 +1,7 @@
 package FloydWarshall;
 /**
- * SWEA 1263 사람 네트워크2(D6)
- * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18P2B6Iu8CFAZN
+ * SWEA 1263 사람 네트워크2(D6
+ *  * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV18P2B6Iu8CFAZN
  */
 
 import java.io.BufferedReader;
