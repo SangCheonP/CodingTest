@@ -56,6 +56,7 @@ public class Baek_7490_0만들기 {
      * @param expr 현재까지의 식
      */
     static void dfs(int num, int curSum, int lastNum, String expr){
+        // 모든 숫자릴 다 처리했으면
         if(num > N){
             if(curSum == 0)
                 results.add(expr);
@@ -64,7 +65,6 @@ public class Baek_7490_0만들기 {
 
         // 공백 추가: 숫자 연결(32)
         int newLastNum = (lastNum >=0) ? (lastNum *10 + num) : (lastNum *10 - num);
-
         int newSum = curSum - lastNum + newLastNum;
         dfs(num + 1, newSum, newLastNum, expr + " " + num);
 
