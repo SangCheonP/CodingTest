@@ -16,6 +16,11 @@ import java.util.List;
  * 
  * 각 테스트 케이스의 결과는 한 줄을 띄워 구분
  */
+
+/**
+ * 1. 배열이나 리스트가 아닌 스트링으로 저장
+ * 2. 백트래킹을 할 때. (처리할 수, 지금까지 합, 마지막으로 처리한 수, 현재까지의 수식)을 넘김
+ */
 public class Baek_7490_0만들기 {
     static int N;
     static List<String> results;
