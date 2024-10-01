@@ -1,4 +1,4 @@
-package Graph;
+package DFS;
 
 /**
  * N개의 도시
