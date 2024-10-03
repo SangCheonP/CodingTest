@@ -1,4 +1,4 @@
-package Imple;
+package DP;
 
 /**
  * N명의 아이들
@@ -18,6 +18,12 @@ import java.util.Arrays;
  * DP[i] = i번째 아이까지 고려했을 때 LIS 길이
  * 이중 for문 -> 시간복잡도 O(N^2)
  */
+
+/**
+ *  1. 최장 증가 부분 수열(LIS) -> DP or 이분법
+ *  2. dp[i] = i까지 고려했을 때 LIS 길이
+ */
+
 public class Baek_2631_줄세우기 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
