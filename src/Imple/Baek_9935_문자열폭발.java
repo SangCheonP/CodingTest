@@ -3,7 +3,6 @@ package Imple;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.Buffer;
 import java.util.*;
 
 /**
@@ -14,8 +13,17 @@ import java.util.*;
  *
  * 남은 문자열 구하기
  * 없으면 -> FRULA
- *
- *
+ */
+
+/**
+ * sb의 뒷 부분이 폭발 문자열이랑 같은지 비교
+ * 만약 같으면 해당 문자열 제거
+ * 다르면 넘어감
+ */
+
+/**
+ * 1. StringBuilder의 delete와 substring은 end는 미포함(4면, 3까지)
+ * 2. Stack을 활용하여 풀수는 있으나 비교하고 복사를 반복하기 때문에 N^2의 시간 복잡도를 갖는다.
  */
 public class Baek_9935_문자열폭발 {
     public static void main(String[] args) throws IOException {
@@ -23,40 +31,24 @@ public class Baek_9935_문자열폭발 {
         String line = br.readLine().toString();
         String boom = br.readLine().toString();
 
-        Stack<Character> stack = new Stack<>();
+        StringBuilder sb = new StringBuilder();
 
         for (char c : line.toCharArray()){
-            stack.push(c);
+            sb.append(c);
 
-            // 스택 안에 있는 것이 폭발 문자열보다 작으면
-            if(boom.length() > stack.size())
+            // 폭발 문자열이 버퍼보다 크면 다음 문자 진행
+            if(boom.length() > sb.length())
                 continue;
             
-            // 스택의 윗부분의 폭발문자열 길이만큼 비교
-            List<Character> tmp = new LinkedList<>();
-            
-            // 문자열 뒤부터 비교
-            for(int i = boom.length() - 1; i >= 0; i--){
-                tmp.add(stack.pop());
-
-                // 일치하지 않은 문자열이면
-                if(boom.charAt(i) != tmp.get(tmp.size()-1)){
-                    // stack에 다시 넣음
-                    for(char tmpC : tmp){
-                        stack.add(tmpC);
-                    }
-                    break;
-                }
+            // sb의 뒷부분이 폭발 문자열이랑 일치하면 삭제
+            if(sb.substring(sb.length() - boom.length(), sb.length()).equals(boom)){
+                sb.delete(sb.length() - boom.length(), sb.length());
             }
         }
 
-        if(stack.size() == 0){
+        if(sb.length() == 0){
             System.out.println("FRULA");
         }else{
-            StringBuilder sb = new StringBuilder();
-            while(!stack.isEmpty()){
-                sb.insert(0, stack.pop());
-            }
             System.out.println(sb);
         }
     }
