@@ -54,7 +54,7 @@ public class Baek_16987_계란으로계란치기 {
             return;
         }
 
-        // 현재 계란이 깨져 있다면, 다음 계란으로 넘어감
+        // 현재 계란이 깨져 있다면, 다음 계란으로 넘어감.
         if (eggs[idx].durability <= 0) {
             dfs(idx + 1);
             return;
