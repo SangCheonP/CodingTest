@@ -24,11 +24,11 @@ public class Beak_1916_최소비용구하기 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st;
 
         // 도시의 개수(N)와 버스의 개수(M) 입력
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(br.readLine());
+        int M = Integer.parseInt(br.readLine());
 
         // 인접 리스트 초기화 (각 도시를 노드로 표현)
         List<List<Node>> adj = new ArrayList<>();
