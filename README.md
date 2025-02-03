@@ -2,9 +2,69 @@
 
 ## 주로 출제되는 알고리즘
 
-### 해시
+### 맵
+```
+Map<String, Integer> map = new HashMap<>();
+Map<String, Integer> map = new LinkedHashMap<>(); // 입력 순서 유지
+Map<String, Integer> map = new TreeMap<>(); // 키 값이 정렬
 
-### 스택/큐
+map.put("apple", 3);
+map.get("apple"); // 3
+map.getOrDefault("apple", 0);
+map.containsKey("apple");
+map.containsValue(3);
+map.remove("apple");
+map.size();
+map.isEmpty();
+
+map.keySet(); // Set 반환
+Set<String> keys = map.keySet();
+
+map.values(); // Collection 반환
+Collection<Integer> values = map.values();
+
+map.entrySet();
+for (Map.Entry<String, Integer> entry : map.entrySet()) {
+     System.out.println(entry.getKey() + ": " + entry.getValue());
+}
+```
+
+### 스택
+```
+Stack<Integer> stack = new Stack<>();
+
+stack.push(10);
+int top = stack.pop();
+int top = stack.peek();
+stack.isEmpty();
+stack.size();
+```
+
+### 큐
+```
+Queue<Integer> queue = new LinkedList<>();
+Queue<Integer> queue = new ArrayDeque<>();
+
+queue.offer(10);
+int front = queue.poll();
+int front = queue.peek();
+queue.isEmpty();
+queue.size();
+```
+
+### 덱(Deque)
+```
+Deque<Integer> deque = new ArrayDeque<>();
+
+deque.offerFirst(10);
+deque.offerLast(20);
+int front = deque.pollFirst();
+int back = deque.pollLast();
+int front = deque.peekFirst();
+int back = deque.peekLast();
+deque.isEmpty();
+deque.size();
+```
 
 ### 힙
 ```
