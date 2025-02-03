@@ -2,9 +2,11 @@
 
 ## 주로 출제되는 알고리즘
 
-- 해시
-- 스택/큐
-- 힙
+### 해시
+
+### 스택/큐
+
+### 힙
 ```
 PriorityQueue<> pq = new PriorityQueue<>();
 ```
@@ -12,17 +14,31 @@ PriorityQueue<> pq = new PriorityQueue<>();
   - 최대
   - 최소
 
-- 정렬
+### 정렬
 ```
 Collections.sort(?, Collections.reverseOrder());
 ```
-- 완전탐색
-- 탐욕법
-- DP
-- DFS/BFS
-- 이분탐색
-- 그래프
-- 순열
+
+### 완전탐색
+
+### 탐욕법
+
+### DP
+
+### DFS/BFS
+
+### 이분탐색
+
+### 그래프
+```
+List<List<Integer>> list = new ArrayList<>();
+
+for(int i = 0; i < n; i++){
+    list.add(new ArrayList<>());
+}
+```
+
+### 순열
 ```
 static void permute(String current, char[] nums, boolean[] visited) {
     if (!current.isEmpty()) {
@@ -39,7 +55,7 @@ static void permute(String current, char[] nums, boolean[] visited) {
 }
 ```
 
--MST(최소 신장 트리)
+### MST(최소 신장 트리)
 ```
 static class Edge implements Comparable<Edge>{
     int from, to, cost;
