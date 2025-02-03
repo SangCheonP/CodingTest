@@ -8,15 +8,24 @@
 
 ### 힙
 ```
-PriorityQueue<> pq = new PriorityQueue<>();
+PriorityQueue<> pq = new PriorityQueue<>(); // 최소힙
+PriorityQueue<> pq = new PriorityQueue<>(Collections.reverseOrder()); // 최대힙
 ```
- 
-  - 최대
-  - 최소
 
 ### 정렬
 ```
-Collections.sort(?, Collections.reverseOrder());
+// 배열
+Arrays.sort(arr);
+
+// 리스트
+Collections.sort(list); // 오름차순
+Collections.sort(list, Collections.reverseOrder()); // 내림차순
+
+// 배열 -> 리스트
+List<String> list = new ArrayList<>(Arrays.asList(arr));
+
+// 리스트 -> 배열
+String[] arr = list.toArray(new String[0]);
 ```
 
 ### 완전탐색
