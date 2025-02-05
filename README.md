@@ -16,6 +16,7 @@ map.containsValue(3);
 map.remove("apple");
 map.size();
 map.isEmpty();
+map.computeIfAbsent("apple", k -> value);
 
 map.keySet(); // Set 반환
 Set<String> keys = map.keySet();
