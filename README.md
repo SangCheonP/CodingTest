@@ -98,6 +98,17 @@ String[] arr = list.toArray(new String[0]);
 ### DFS/BFS
 
 ### 이분탐색
+```
+while (left <= right) {
+    int mid = (left + right) / 2;
+    
+    if (조건 충족) {
+        left = mid + 1;  // 더 큰 값을 탐색
+    } else {
+        right = mid - 1; // 더 작은 값을 탐색
+    }
+}
+```
 
 ### 그래프
 ```
