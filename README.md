@@ -118,6 +118,56 @@ for(int i = 0; i < n; i++){
     list.add(new ArrayList<>());
 }
 ```
+```
+// 다익스트라 알고리즘에서 사용할 Node 클래스
+static class Node implements Comparable<Node> {
+    int index; // 현재 노드의 번호
+    int cost;  // 현재까지의 비용
+
+    public Node(int index, int cost) {
+        this.index = index;
+        this.cost = cost;
+    }
+
+    // 우선순위 큐에서 cost 기준으로 정렬 (작은 비용이 우선순위 높음)
+    @Override
+    public int compareTo(Node other) {
+        return Integer.compare(this.cost, other.cost);
+    }
+}
+
+// 다익스트라 알고리즘 (우선순위 큐 사용)
+public static int[] dijkstra(int n, List<List<Node>> graph, int start) {
+    PriorityQueue<Node> pq = new PriorityQueue<>(); // 우선순위 큐 (최소 힙)
+    int[] dist = new int[n + 1]; // 최단 거리 저장 배열
+    Arrays.fill(dist, Integer.MAX_VALUE); // 모든 거리 초기값을 무한대로 설정
+    dist[start] = 0; // 시작 노드의 거리는 0
+    pq.offer(new Node(start, 0)); // 시작 노드를 큐에 삽입
+
+    while (!pq.isEmpty()) {
+        Node current = pq.poll(); // 현재 최단 거리 노드 선택
+        int now = current.index;
+        int nowCost = current.cost;
+
+        // 이미 처리된 노드는 건너뛴다 (더 짧은 경로를 이미 찾음)
+        if (dist[now] < nowCost) continue;
+
+        // 현재 노드와 연결된 인접 노드들을 확인
+        for (Node next : graph.get(now)) {
+            int nextIndex = next.index;
+            int newCost = nowCost + next.cost; // 현재 노드를 거쳐 가는 거리 계산
+
+            // 새로운 비용이 기존 저장된 거리보다 작다면 갱신
+            if (newCost < dist[nextIndex]) {
+                dist[nextIndex] = newCost;
+                pq.offer(new Node(nextIndex, newCost)); // 갱신된 노드를 우선순위 큐에 삽입
+            }
+        }
+    }
+
+    return dist; // 최단 거리 배열 반환
+}
+```
 
 ### 순열
 ```
