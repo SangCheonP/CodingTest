@@ -17,17 +17,20 @@ class Solution {
                 int mid = (left + right) / 2;
                 
                 if (B[mid] > A[i]) {
-                    right = mid - 1; // 더 작은 값을 찾아야 함
+                    right = mid - 1;  // 더 작은 큰 값을 찾아야 함
                 } else {
-                    left = mid + 1; // 더 큰 값을 찾아야 함
+                    left = mid + 1;   // 더 큰 값을 찾아야 함
                 }
             }
 
-            // B에서 A[i]보다 큰 값이 존재하는 경우
-            if (left < B.length) {
-                result++;
-                index = left + 1;  // 다음 탐색을 위해 사용한 인덱스 업데이트
+            // 더 이상 매칭할 수 있는 B의 값이 없다면, 현재 result 반환
+            if (left >= B.length) {
+                return result;
             }
+
+            // B에서 A[i]보다 큰 값이 존재하는 경우
+            result++;
+            index = left + 1;  // 다음 탐색을 위해 사용한 인덱스 업데이트
         }
 
         return result;
