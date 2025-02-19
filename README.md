@@ -232,3 +232,21 @@ static boolean union(int a, int b){
     return false; // 이미 같은 집합이면 연결하지 않음
 }
 ```
+
+
+### 플로이드-워셜(Floyd-Warshall)
+```
+// 거리 배열 복사
+int[][] dist = new int[n][n];
+
+// 플로이드-워셜 알고리즘 수행
+for (int k = 0; k < n; k++) { // 중간 노드
+     for (int i = 0; i < n; i++) { // 출발 노드
+          for (int j = 0; j < n; j++) { // 도착 노드
+               if (dist[i][k] != INF && dist[k][j] != INF) {
+                    dist[i][j] = Math.min(dist[i][j], dist[i][k] + dist[k][j]);
+               }
+          }
+     }
+}
+```
