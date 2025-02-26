@@ -250,3 +250,41 @@ for (int k = 0; k < n; k++) { // 중간 노드
      }
 }
 ```
+
+### 이중 연결 리스트
+```
+class Node {
+    int data;
+    Node prev, next;
+    
+    Node(int data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+class DoublyLinkedList {
+    Node head, tail;
+
+    // 꼬리에 노드 삽입
+    void insert(int data) {
+        Node newNode = new Node(data);
+        if (tail == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            newNode.prev = tail;
+            tail = newNode;
+        }
+    }
+
+    // 노드 삭제
+    void delete(Node node) {
+        if (node.prev != null) node.prev.next = node.next;
+        if (node.next != null) node.next.prev = node.prev;
+        if (node == head) head = node.next;
+        if (node == tail) tail = node.prev;
+    }
+}
+```
