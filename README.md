@@ -25,6 +25,25 @@ int[] arr = list.stream()
 ---
 <br>
 
+### **정렬 (Sorting)**
+```java
+// 배열 정렬
+Arrays.sort(arr);
+
+// 리스트 정렬
+Collections.sort(list); // 오름차순
+Collections.sort(list, Collections.reverseOrder()); // 내림차순
+
+// 배열 -> 리스트 변환
+List<String> list = new ArrayList<>(Arrays.asList(arr));
+
+// 리스트 -> 배열 변환
+String[] arr = list.toArray(new String[0]);
+```
+
+---
+<br>
+
 ### **맵 (Map) - 자주 사용하는 메서드**
 ```java
 Map<String, Integer> map = new HashMap<>(); // 기본 해시맵
@@ -126,25 +145,6 @@ int peekFront = deque.peekFirst(); // 앞 요소 조회
 int peekBack = deque.peekLast(); // 뒤 요소 조회
 deque.isEmpty();
 deque.size();
-```
-
----
-<br>
-
-### **정렬 (Sorting)**
-```java
-// 배열 정렬
-Arrays.sort(arr);
-
-// 리스트 정렬
-Collections.sort(list); // 오름차순
-Collections.sort(list, Collections.reverseOrder()); // 내림차순
-
-// 배열 -> 리스트 변환
-List<String> list = new ArrayList<>(Arrays.asList(arr));
-
-// 리스트 -> 배열 변환
-String[] arr = list.toArray(new String[0]);
 ```
 
 ---
@@ -425,6 +425,33 @@ class DoublyLinkedList {
 
 ---
 <br>
+
+### **이진 트리(Binary Tree)**
+```java
+class BinaryTree {
+    static class Node {
+        int value;
+        Node left, right;
+
+        Node(int value) {
+            this.value = value;
+            this.left = null;
+            this.right = null;
+        }
+
+        // 🔹 이진 탐색 트리 삽입 (x 값 기준)
+        void insert(Node child) {
+            if (child.value < this.value) { // 왼쪽 서브트리
+                if (this.left == null) this.left = child;
+                else this.left.insert(child);
+            } else { // 오른쪽 서브트리
+                if (this.right == null) this.right = child;
+                else this.right.insert(child);
+            }
+        }
+    }
+}
+```
 
 ## 📌 **추가 기능 및 알고리즘**
 - 완전 탐색 (Brute Force)
