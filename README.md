@@ -152,6 +152,32 @@ deque.size();
 
 ### **순열 (Permutation) & 조합 (Combination)**
 ```java
+for (int i = 0; i < arr.length; i++) {
+    if (!visited[i]) {      // 방문하지 않았다면
+        visited[i] = true;  // 방문 처리
+        temp.add(arr[i]);
+
+        permutation(arr, visited, temp); // 다음 원소를 위한 재귀 호출
+
+        visited[i] = false; // 원상복구 (백트래킹)
+        temp.remove(temp.size() - 1);
+    }
+}
+```
+
+```java
+for (int i = start; i < arr.length; i++) {
+    temp.add(arr[i]);
+
+    combination(arr, temp, i + 1, r - 1); // i+1로 다음 숫자부터 선택 (중복 방지)
+
+    temp.remove(temp.size() - 1); // 원상복구 (백트래킹)
+}
+```
+
+
+
+```java
 void permute(String current, char[] nums, boolean[] visited) {
     if (!current.isEmpty()) {
         set.add(Integer.parseInt(current)); // 현재까지 만든 문자열을 정수로 변환하여 Set에 추가 (중복 방지)
