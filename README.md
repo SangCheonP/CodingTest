@@ -2,6 +2,14 @@
 
 ## 주로 출제되는 알고리즘
 
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringTokenizer st = new StringTokenizer(br.readLine());
+
+String A = st.nextToken();
+```
+
+
 ### **int[] <-> List<Integer> 변환**
 
 #### **int[] -> List<Integer> 변환**
