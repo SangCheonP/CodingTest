@@ -9,6 +9,8 @@ StringTokenizer st = new StringTokenizer(br.readLine());
 String A = st.nextToken();
 
 String[] input = br.readLine().split(" ");
+
+char[] charArr = s1.toCharArray();
 ```
 
 
