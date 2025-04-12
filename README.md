@@ -7,6 +7,8 @@ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 StringTokenizer st = new StringTokenizer(br.readLine());
 
 String A = st.nextToken();
+
+String[] input = br.readLine().split(" ");
 ```
 
 
