@@ -1,6 +1,8 @@
+package Greedy;
+
 import java.util.*;
 
-class Solution {
+class Programmers_인사고과 {
     public int solution(int[][] scores) {
         int[] target = scores[0]; // 원호의 점수 저장
         

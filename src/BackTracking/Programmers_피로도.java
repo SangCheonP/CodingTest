@@ -1,4 +1,6 @@
-class Solution {
+package BackTracking;
+
+class Programmers_피로도 {
     static int result = 0;
     
     public int solution(int k, int[][] dungeons) {

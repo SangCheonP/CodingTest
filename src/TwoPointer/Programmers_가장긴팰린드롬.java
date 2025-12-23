@@ -1,4 +1,6 @@
-class Solution {
+package TwoPointer;
+
+class Programmers_가장긴팰린드롬 {
     public int solution(String s) {
         int answer = 0;
         int n = s.length();

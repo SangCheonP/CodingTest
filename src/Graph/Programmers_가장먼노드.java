@@ -1,6 +1,8 @@
+package Graph;
+
 import java.util.*;
 
-class Solution {
+class Programmers_가장먼노드 {
     public int solution(int n, int[][] edge) {
         // 그래프 생성
         List<List<Integer>> graph = new ArrayList<>();

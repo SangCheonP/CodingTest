@@ -1,4 +1,4 @@
-/**
+package Queue; /**
 1. 큐 2개를 선언
 2. 각 큐에 진행도, 속도를 넣음
 3. 맨 앞이 100이상이면 진행도가 100보다 작은 것이 나올때까지 뺌, 그 수를 결과 배열에 넣음
@@ -8,7 +8,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_기능개발 {
     public int[] solution(int[] progresses, int[] speeds) {
         List<Integer> list = new ArrayList<>();
         

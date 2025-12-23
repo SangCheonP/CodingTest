@@ -1,6 +1,6 @@
-import java.util.*;
+package Greedy;
 
-class Solution {
+class Programmers_기지국설치 {
     public int solution(int n, int[] stations, int w) {
         int answer = 0;
         int range = 2 * w + 1; // 한 기지국이 커버할 수 있는 범위

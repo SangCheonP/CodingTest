@@ -1,6 +1,8 @@
+package DFS;
+
 import java.util.*;
 
-class Solution {
+class Programmers_여행경로 {
     static List<String> result;
     static Map<String, PriorityQueue<String>> map;
     

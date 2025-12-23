@@ -1,4 +1,6 @@
-class Solution {
+package DP;
+
+class Programmers_사칙연산 {
     public int solution(String arr[]) {
         int n = (arr.length + 1) / 2;  // 숫자의 개수
         int[][] maxDP = new int[n][n]; // 최댓값 DP 테이블

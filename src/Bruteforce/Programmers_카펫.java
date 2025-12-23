@@ -1,3 +1,4 @@
+package Bruteforce;
 /**
 * total = b + y
 *       = w * h
@@ -7,7 +8,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_카펫 {
     public static int[] solution(int brown, int yellow) {
         int total = brown + yellow; // 전체 타일 개수
         

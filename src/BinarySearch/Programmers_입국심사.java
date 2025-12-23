@@ -1,6 +1,8 @@
+package BinarySearch;
+
 import java.util.*;
 
-class Solution {
+class Programmers_입국심사 {
     public long solution(int n, int[] times) {
         long answer = Long.MAX_VALUE;
         long start = 1;

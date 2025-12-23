@@ -1,3 +1,4 @@
+package BackTracking;
 /**
 *  1. 완전 탐색 재귀로 모든 경우의 수 체크
 *  2. 리스트에 저장하고, 해당 단어의 위치를 반환
@@ -5,7 +6,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_모음사전 {
     static String[] vowels = {"A", "E", "I", "O", "U"};
     static List<String> list = new ArrayList<>();
     

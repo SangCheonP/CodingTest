@@ -1,4 +1,4 @@
-/**
+package Imple; /**
 * 1. 타임테이블을 정렬
 * 2. 버스 도착 시간 리스트 생성
 * 3. 버스에 인원 수에 맞게 넣음
@@ -9,7 +9,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_1차_셔틀버스 {
     public String solution(int n, int t, int m, String[] timetable) {
         // 1. 크루 도착 시간 정렬 (분 단위 변환)
         List<Integer> crewTimes = new ArrayList<>();

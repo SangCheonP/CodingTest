@@ -1,6 +1,8 @@
+package BFS;
+
 import java.util.*;
 
-class Solution {
+class Programmers_단어변환 {
     // 단어와 변환 횟수를 저장하는 Word 클래스
     static class Word {
         String w;

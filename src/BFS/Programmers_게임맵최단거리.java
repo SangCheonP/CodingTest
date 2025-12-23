@@ -1,4 +1,4 @@
-/**
+package BFS; /**
 * 1. 큐 생성하여 처음 위치를 넣음
 * 2. 큐에서 하나씩 빼서 동서남북 진행하여 이동할 수 있는 것은 다음 칸 좌표 큐에 넣음
 * 3. (n-1, m-1)에 도착하면 이동거리를 결과에 넣고 반환
@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_게임맵최단거리 {
     static class Point {
         int i, j;
         

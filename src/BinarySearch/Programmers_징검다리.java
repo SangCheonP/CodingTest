@@ -1,6 +1,8 @@
+package BinarySearch;
+
 import java.util.*;
 
-class Solution {
+class Programmers_징검다리 {
     public int solution(int distance, int[] rocks, int n) {
         Arrays.sort(rocks); // 바위 위치 정렬
 

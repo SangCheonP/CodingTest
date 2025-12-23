@@ -1,6 +1,8 @@
+package DFS;
+
 import java.util.*;
 
-class Solution {
+class Programmers_전력망을둘로나누기 {
     public int solution(int n, int[][] wires) {
         List<List<Integer>> list = new ArrayList<>();
         

@@ -1,6 +1,8 @@
+package Sort;
+
 import java.util.*;
 
-class Solution {
+class Programmers_가장큰수 {
     public String solution(int[] numbers) {
         // 1. 주어진 수 스트링으로 변환
         String[] nums = new String[numbers.length];

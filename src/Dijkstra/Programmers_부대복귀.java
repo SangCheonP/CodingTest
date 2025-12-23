@@ -1,6 +1,8 @@
+package Dijkstra;
+
 import java.util.*;
 
-class Solution {
+class Programmers_부대복귀 {
     public int[] solution(int n, int[][] roads, int[] sources, int destination) {
         // 그래프 생성
         List<List<Integer>> graph = new ArrayList<>();

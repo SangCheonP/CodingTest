@@ -1,6 +1,8 @@
+package SlidingWindow;
+
 import java.util.*;
 
-class Solution {
+class Programmers_징검다리건너기 {
     public int solution(int[] stones, int k) {
         Deque<Integer> deque = new LinkedList<>();
         int minOfMax = Integer.MAX_VALUE; // 최댓값 후보 중 최소값 저장

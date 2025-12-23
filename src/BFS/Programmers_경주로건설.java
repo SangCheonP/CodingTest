@@ -1,6 +1,8 @@
+package BFS;
+
 import java.util.*;
 
-class Solution {
+class Programmers_경주로건설 {
     // 방향 벡터 (상, 하, 좌, 우)
     static int[] di = {-1, 1, 0, 0};
     static int[] dj = {0, 0, -1, 1};

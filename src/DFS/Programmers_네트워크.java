@@ -1,6 +1,8 @@
+package DFS;
+
 import java.util.*;
 
-class Solution {
+class Programmers_네트워크 {
     public int solution(int n, int[][] computers) {
         // 인접 리스트를 사용하여 그래프 표현
         List<List<Integer>> graph = new ArrayList<>();

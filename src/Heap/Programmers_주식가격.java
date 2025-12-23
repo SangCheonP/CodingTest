@@ -1,4 +1,4 @@
-/**
+package Heap; /**
 * 1. 큐에 모든 가격을 넣음
 * 2. 큐가 빌때까지
 * 3. 큐에서 하나 뺌, 시간 = 1
@@ -9,7 +9,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_주식가격 {
     public int[] solution(int[] prices) {
         Queue<Integer> queue = new LinkedList<>();
         

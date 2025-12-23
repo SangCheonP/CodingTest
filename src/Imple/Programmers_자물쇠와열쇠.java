@@ -1,6 +1,6 @@
-import java.util.*;
+package Imple;
 
-class Solution {
+class Programmers_자물쇠와열쇠 {
     public boolean solution(int[][] key, int[][] lock) {
         int n = lock.length;
         int m = key.length;

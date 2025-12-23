@@ -1,4 +1,6 @@
-class Solution {
+package DFS;
+
+class Programmers_타켓넘버 {
     static int answer;
     public int solution(int[] numbers, int target) {
         answer = 0;

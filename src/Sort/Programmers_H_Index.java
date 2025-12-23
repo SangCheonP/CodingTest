@@ -1,6 +1,8 @@
+package Sort;
+
 import java.util.*;
 
-class Solution {
+class Programmers_H_Index {
     public int solution(int[] citations) {
         int answer = 0;
         

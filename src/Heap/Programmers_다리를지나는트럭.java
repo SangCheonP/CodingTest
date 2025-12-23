@@ -1,4 +1,4 @@
-/**
+package Heap; /**
 * 1. 현재 어떤 트럭인지를 가르키는 인덱스를 가지고 해당 트럭 선택
 * 2. 해당 트럭이 큐에 들어갈 수 있는 지 체크
 * 2-1. 큐의 사이즈가 < bridge_length인지 체크
@@ -11,7 +11,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_다리를지나는트럭 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int time = 0; // 경과 시간
         int truckIdx = 0; // 대기 트럭 인덱스

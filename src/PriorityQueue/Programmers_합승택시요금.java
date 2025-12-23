@@ -1,6 +1,8 @@
+package PriorityQueue;
+
 import java.util.*;
 
-class Solution {
+class Programmers_합승택시요금 {
     // 다익스트라 알고리즘에서 사용할 Node 클래스 (우선순위 큐 활용)
     static class Node implements Comparable<Node> {
         int idx, w; // idx: 노드 번호, w: 가중치(비용)

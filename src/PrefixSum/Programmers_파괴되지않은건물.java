@@ -1,4 +1,6 @@
-class Solution {
+package PrefixSum;
+
+class Programmers_파괴되지않은건물 {
     public int solution(int[][] board, int[][] skill) {
         int n = board.length;
         int m = board[0].length;

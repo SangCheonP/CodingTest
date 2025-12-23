@@ -1,4 +1,6 @@
-class Solution {
+package Greedy;
+
+class Programmers_풍선터트리기 {
     public int solution(int[] a) {
         int[] leftMin = new int[a.length];   // 왼쪽 최소값 배열
         int[] rightMin = new int[a.length];  // 오른쪽 최소값 배열

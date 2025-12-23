@@ -1,6 +1,6 @@
-import java.util.*;
+package DP;
 
-class Solution {
+class Programmers_연속펄스부분수열의합 {
     public long solution(int[] sequence) {
         int n = sequence.length;
         

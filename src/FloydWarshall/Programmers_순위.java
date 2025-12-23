@@ -1,6 +1,8 @@
+package FloydWarshall;
+
 import java.util.*;
 
-class Solution {
+class Programmers_순위 {
     public int solution(int n, int[][] results) {
         // ⚡ 그래프 초기화 (승리 여부 저장)
         int[][] graph = new int[n + 1][n + 1];

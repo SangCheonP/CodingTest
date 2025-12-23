@@ -1,6 +1,8 @@
+package MST;
+
 import java.util.*;
 
-class Solution {
+class Programmers_섬연결하기 {
     static class Edge implements Comparable<Edge> {
         int from, to, cost;
         

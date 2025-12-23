@@ -1,4 +1,4 @@
-/**
+package Queue; /**
 * 1. 큐를 만들어서 인덱스랑 우선순위를 넣음
 * 2. 자신보다 높은 우선순위가 있는 지 체크. 
 * 2-1. for문
@@ -9,7 +9,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_프로세스 {
     public int solution(int[] priorities, int location) {
         Queue<Process> queue = new LinkedList<>();
         int[] priorityCount = new int[10]; // 우선순위 개수를 저장하는 배열

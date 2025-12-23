@@ -1,3 +1,4 @@
+package Recursion;
 /**
 * 1. 등록자 - 추천인 의 Map 생성
 * 2. 사람 - 이익의 Map 생성
@@ -7,7 +8,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_다단계칫솔판매 {
     public int[] solution(String[] enroll, String[] referral, String[] seller, int[] amount) {
         // 1. 등록자 - 추천인 Map 생성
         Map<String, String> members = new HashMap<>();

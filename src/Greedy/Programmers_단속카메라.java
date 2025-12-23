@@ -1,6 +1,8 @@
+package Greedy;
+
 import java.util.Arrays;
 
-class Solution {
+class Programmers_단속카메라 {
     public int solution(int[][] routes) {
         // 차량의 진출 지점(끝점) 기준으로 정렬
         Arrays.sort(routes, (a, b) -> Integer.compare(a[1], b[1]));

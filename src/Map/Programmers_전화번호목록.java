@@ -1,6 +1,8 @@
+package Map;
+
 import java.util.*;
 
-class Solution {
+class Programmers_전화번호목록 {
     public boolean solution(String[] phone_book) {
         // 1. Map 생성 및 모든 전화번호 저장
         Map<String, Integer> map = new HashMap<>();

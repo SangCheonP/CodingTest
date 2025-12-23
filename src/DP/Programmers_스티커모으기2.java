@@ -1,4 +1,6 @@
-class Solution {
+package DP;
+
+class Programmers_스티커모으기2 {
     public int solution(int[] sticker) {
         int n = sticker.length;
         if (n == 1) return sticker[0]; // 스티커가 1개일 경우 예외 처리

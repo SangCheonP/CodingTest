@@ -1,6 +1,8 @@
+package Heap;
+
 import java.util.*;
 
-class Solution {
+class Programmers_이중우선순위큐 {
     public int[] solution(String[] operations) {
         PriorityQueue<Integer> maxPq = new PriorityQueue<>(Collections.reverseOrder()); // 최대힙
         PriorityQueue<Integer> minPq = new PriorityQueue<>(); // 최소힙

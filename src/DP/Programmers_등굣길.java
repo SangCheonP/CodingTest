@@ -1,4 +1,6 @@
-class Solution {
+package DP;
+
+class Programmers_등굣길 {
     public int solution(int m, int n, int[][] puddles) {
         int MOD = 1000000007;
         int[][] map = new int[n + 1][m + 1];

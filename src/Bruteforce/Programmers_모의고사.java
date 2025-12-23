@@ -1,7 +1,9 @@
+package Bruteforce;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class Solution {
+class Programmers_모의고사 {
     public int[] solution(int[] answers) {
         // 각 학생들의 정답 패턴 배열
         int[] s1 = {1, 2, 3, 4, 5}; 

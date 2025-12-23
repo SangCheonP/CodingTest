@@ -1,3 +1,4 @@
+package Greedy;
 /**
 * 1. 먼저 무게를 오름차순으로 정렬
 * 2. 현재 사람을 가르키는 인덱스
@@ -8,7 +9,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_구명보트 {
     public int solution(int[] people, int limit) {
         Arrays.sort(people); // 무게를 오름차순으로 정렬
         int i = 0, j = people.length - 1; // 가장 가벼운 사람과 가장 무거운 사람의 인덱스

@@ -1,3 +1,4 @@
+package Map;
 /**
 * 1. Map을 선언해서 같은 의상 종류끼리 묶어 개수를 셈
 * 2. 각 종류에 입지 않는 선택지 +1 하여 모든 선택지를 곱하여 조합 수를 계산
@@ -6,7 +7,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_의상 {
     public int solution(String[][] clothes) {
         Map<String, Integer> map = new HashMap<>();
         

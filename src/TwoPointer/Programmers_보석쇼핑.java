@@ -1,3 +1,4 @@
+package TwoPointer;
 /**
 * 1. 모든 보석의 종류 개수를 확인하여 목표 개수(gemsCnt)를 구함.
 * 2. start, end를 0으로 설정하고, Map을 사용해 현재 포함된 보석 개수를 관리.
@@ -8,7 +9,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_보석쇼핑 {
     public int[] solution(String[] gems) {
         // 1. 모든 보석의 종류 개수 구하기
         Set<String> gemTypes = new HashSet<>(Arrays.asList(gems));

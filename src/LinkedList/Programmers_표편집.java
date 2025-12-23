@@ -1,6 +1,8 @@
+package LinkedList;
+
 import java.util.*;
 
-class Solution {
+class Programmers_표편집 {
     public String solution(int n, int k, String[] cmd) {
         Stack<Integer> deleted = new Stack<>();
         int[] prev = new int[n];

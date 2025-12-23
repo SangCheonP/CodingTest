@@ -1,4 +1,6 @@
-class Solution {
+package DP;
+
+class Programmers_도둑질 {
     public int solution(int[] money) {
         int n = money.length;
         if (n == 1) return money[0];

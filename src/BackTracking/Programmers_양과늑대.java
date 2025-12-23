@@ -1,6 +1,8 @@
+package BackTracking;
+
 import java.util.*;
 
-class Solution {
+class Programmers_양과늑대 {
     static int result = 0;
     
     public int solution(int[] info, int[][] edges) {

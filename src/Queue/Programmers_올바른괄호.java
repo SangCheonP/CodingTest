@@ -1,6 +1,8 @@
+package Queue;
+
 import java.util.*;
 
-class Solution {
+class Programmers_올바른괄호 {
     public boolean solution(String s) {
         Queue<Character> queue = new LinkedList<>();
 

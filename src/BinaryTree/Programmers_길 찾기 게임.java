@@ -1,6 +1,8 @@
+package BinaryTree;
+
 import java.util.*;
 
-class Solution {
+class Programmers_길찾기게임 {
     static class Node {
         int idx, x, y; // 노드 번호, x 좌표, y 좌표
         Node left, right; // 왼쪽 및 오른쪽 자식 노드

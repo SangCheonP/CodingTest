@@ -1,3 +1,4 @@
+package BackTracking;
 /**
 * 1. 각 불량 사용자 패턴별로 가능한 응모자 리스트를 저장
 * 2. 백트래킹(DFS)를 이용해 모든 조합을 생성
@@ -7,7 +8,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_불량사용자 {
     // 유효한 조합을 저장하는 Set (중복 제거를 위해 Set 사용)
     static Set<Set<String>> validCombinations = new HashSet<>();
     

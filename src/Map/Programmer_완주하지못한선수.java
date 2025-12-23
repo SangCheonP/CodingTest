@@ -1,6 +1,8 @@
+package Map;
+
 import java.util.*;
 
-class Solution {
+class Programmer_완주하지못한선수 {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         

@@ -1,4 +1,6 @@
-class Solution {
+package DP;
+
+class Programmers_거스름돈 {
     public int solution(int n, int[] money) {
         // DP 배열 초기화: dp[i]는 i원을 만들 수 있는 경우의 수를 저장
         int[] dp = new int[n + 1];

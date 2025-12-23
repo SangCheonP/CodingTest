@@ -1,6 +1,8 @@
+package DP;
+
 import java.util.Arrays;
 
-class Solution {
+class Programmers_정수삼각형 {
     public int solution(int[][] triangle) {
         int n = triangle.length;
 

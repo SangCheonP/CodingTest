@@ -1,6 +1,8 @@
+package BinarySearch;
+
 import java.util.*;
 
-class Solution {
+class Programmers_숫자게임 {
     public int solution(int[] A, int[] B) {
         // 1. A와 B 정렬
         Arrays.sort(A);

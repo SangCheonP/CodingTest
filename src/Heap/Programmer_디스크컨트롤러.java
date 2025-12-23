@@ -1,4 +1,4 @@
-/**
+package Heap; /**
 1. 우선순위 큐를 정의(소요 시간, 요청 시각, 작업 번호), jobs를 넣음
 2. 시간 변수를 만들어서, 하나씩 빼면서 진행
 3. 하나가 끝났을 때, 현재 시각 - 요청 시각을 sum에 더함
@@ -6,7 +6,7 @@
 **/
 import java.util.*;
 
-class Solution {
+class Programmer_디스크컨트롤러 {
     public int solution(int[][] jobs) {
         // 요청 시각으로 정렬
         Arrays.sort(jobs, (a ,b) -> a[0] - b[0]);

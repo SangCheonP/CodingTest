@@ -1,6 +1,8 @@
+package Map;
+
 import java.util.*;
 
-class Solution {
+class Programmers_베스트앨범 {
     public int[] solution(String[] genres, int[] plays) {
         // 1. 장르별 총 재생 수 계산
         Map<String, Integer> genreSumPlay = new HashMap<>();

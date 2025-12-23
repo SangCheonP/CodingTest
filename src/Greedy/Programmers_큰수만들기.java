@@ -1,4 +1,4 @@
-/**
+package Greedy; /**
 * 1. 스택에 숫자를 하나씩 넣음
 * 2. 전에 넣은 숫자가 현재 숫자보다 작고, k가 남아있으면 전에 숫자 제거하고, 현재 숫자 넣음
 * 3. 작으면 그냥 넣음
@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-class Solution {
+class Programmers_큰수만들기 {
     public String solution(String number, int k) {
         Stack<Character> stack = new Stack<>();
         

@@ -1,4 +1,4 @@
-/**
+package Greedy; /**
 * 최고의 집합
 * 1. 원소의 합 = S
 * 2. 원소의 곱이 최대
@@ -10,7 +10,7 @@
 
 import java.util.Arrays;
 
-class Solution {
+public class Programmers_최고의집합 {
     public int[] solution(int n, int s) {
         // S가 N보다 작으면 조건을 만족하는 집합이 없음
         if (s < n) return new int[]{-1};
