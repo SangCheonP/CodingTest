@@ -1,31 +1,11 @@
 package Dijkstra;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.*;
+import java.io.*;
 
-/**
- * N개의 숫자로 구분된 마을에 한 명씩
- * N명이 X번 마을에 모여 파티
- * M개의 단반향 도로
- * i번째 길을 지나는데 Ti
- *
- * 오고 가는데 최단
- * 단방향이기 때문에 오고 가는 길이 다를 수 O
- * N명의 학생 중에사 가장 오래걸린 학생은?
- *
- * 1 <= N <= 1,000
- * 1 <= M <= 10,000
- * 1 <= X <= N
- * 1 <= Ti <= 100
- */
-
-/**
- * 1. 모든 정점에서 X로 가는 최단 거리는 N번 돌려야 한다. -> 비효율적
- * 2. 기존 그래프를 뒤집은 그래프로 X를 시작점으로 돌리면 모든 정점에서 X로 가는 최단 거리가 나옴.
- */
 public class Baek_1238_파티 {
     static int N, M, X;
+    static int INF = Integer.MAX_VALUE;
 
     static class Node implements Comparable<Node>{
         int v, w;
@@ -45,78 +25,68 @@ public class Baek_1238_파티 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        N = Integer.parseInt(st.nextToken()); // 1 ~ N번의 마을
-        M = Integer.parseInt(st.nextToken()); // M개의 단방향 도로
-        X = Integer.parseInt(st.nextToken()); // 모이는 마을
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+        X = Integer.parseInt(st.nextToken());
 
         List<List<Node>> graph = new ArrayList<>();
-        List<List<Node>> reverseGraph = new ArrayList<>();
+        List<List<Node>> revGraph = new ArrayList<>();
 
-        // 그래프와 역방향 그래프 초기화
-        for(int i = 0; i <= N; i++){
-            graph.add(new ArrayList<>());
-            reverseGraph.add(new ArrayList<>());
+        for (int i = 0; i <= N; i++) {
+            graph.add(new ArrayList<>()); // 집 가는 길
+            revGraph.add(new ArrayList<>()); // 파티 가는 길 => 기본은 모든 점에 대해서 각각 구해 X값 들을 구하는 방식이지만, 그래프를 뒤집에 X에서 시작하면 다른 곳으로 가는 값을 구하는 데 이는 곧, 파티 가는 길이다
         }
 
-        for(int i = 0; i < M; i++){
+        for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
 
-            int start = Integer.parseInt(st.nextToken()); // 시작
-            int end = Integer.parseInt(st.nextToken()); // 도착
-            int weight = Integer.parseInt(st.nextToken()); // 가중치
+            int s = Integer.parseInt(st.nextToken());
+            int e = Integer.parseInt(st.nextToken());
+            int w = Integer.parseInt(st.nextToken());
 
-            graph.get(start).add(new Node(end, weight));
-            reverseGraph.get(end).add(new Node(start, weight)); // 도로 방향을 뒤집어 추가
+            graph.get(s).add(new Node(e, w));
+            revGraph.get(e).add(new Node(s, w));
         }
 
-        // X번 마을에서 모든 마을로의 최단 거리 계산
-        int[] distFromX = dijkstra(X, graph);
+        int[] goP = Dijk(revGraph);
+        int[] goH = Dijk(graph);
 
-        // 모든 마을에서 X번 마을로의 최단 거리 계산 (반대 그래프 사용)
-        int[] distToX = dijkstra(X, reverseGraph);
+        int result = 0;
 
-        int maxTime = 0;
-        for(int i = 1; i <= N; i++){
-            if(distFromX[i] == Integer.MAX_VALUE || distToX[i] == Integer.MAX_VALUE) continue;
-            maxTime = Math.max(maxTime, distFromX[i] + distToX[i]);
+        for (int i = 1; i <= N; i++) {
+            result = Math.max(result, goP[i] + goH[i]);
         }
 
-        System.out.println(maxTime);
+        System.out.println(result);
     }
 
-    static int[] dijkstra(int start, List<List<Node>> graph){
-        int[] distance = new int[N + 1];
+    static int[] Dijk (List<List<Node>> graph) {
+        int[] dist = new int[N + 1];
+        Arrays.fill(dist, INF);
 
-        // 모든 경로를 최대값으로 초기화
-        Arrays.fill(distance, Integer.MAX_VALUE);
+        dist[X] = 0;
 
-        // 시작점은 0으로 초기화
-        distance[start] = 0;
-
-        // 우선 큐를 만들고, 시작점 넣음
         PriorityQueue<Node> pq = new PriorityQueue<>();
-        pq.offer(new Node(start, 0));
-        
-        while(!pq.isEmpty()){
+        pq.offer(new Node(X, 0));
+
+        while (!pq.isEmpty()) {
             Node cur = pq.poll();
-            
-            int curV = cur.v;
-            int curW = cur.w;
-            
-            // 현재 노드의 가중치가 현재 노드의 최단 거리보다 크면 패스
-            if(curW > distance[cur.v]) continue;
+            int v = cur.v;
+            int w = cur.w;
 
-            for(Node neighbor : graph.get(curV)){
-                int nextV = neighbor.v;
-                int nextW = neighbor.w + curW;
+            if (w > dist[v]) continue;
 
-                if(nextW < distance[nextV]){
-                    distance[nextV] = nextW;
-                    pq.offer(new Node(nextV, nextW));
+            for (Node next : graph.get(v)) {
+                int nV = next.v;
+                int nW = next.w;
+
+                if (dist[v] + nW < dist[nV]) {
+                    dist[nV] = dist[v] + nW;
+                    pq.offer(new Node(nV, dist[v] + nW));
                 }
             }
         }
 
-        return distance;
+        return dist;
     }
 }
