@@ -2,6 +2,130 @@
 
 ## 주로 출제되는 알고리즘
 
+### 순열
+```java
+static void perm (int cnt, int[] result, boolean[] visited) {
+    if (cnt == N) {
+        System.out.println(Arrays.toString(result));
+        return;
+    }
+    
+    for (int i = 0; i < M; i++) {
+        if (visited[i]) continue;
+
+        visited[i] = true;
+        result[cnt] = i;
+        perm(cnt + 1, result, visited);
+        visited[i] = false;
+    }
+}
+```
+
+
+### 조합
+```java
+static void comb (int start, int cnt, int[] result) {
+    if (cnt == N) {
+        System.out.println(Arrays.toString(result));
+        return;
+    }
+    
+    // i <= M - (N - cnt);
+    for (int i = start; i < M; i++) {
+        result[cnt] = i;
+        comb(i + 1, cnt + 1, result);
+    }
+}
+```
+
+### DFS
+```java
+static void dfs(int i, int j) {
+    visited[i][j] = true;
+
+    for (int d = 0; d < 4; d++) {
+        int ni = i + di[d];
+        int nj = j + dj[d];
+
+        if (ni >= 0 && ni < R && nj >= 0 && nj < C) {
+            if (!visited[ni][nj] && map[ni][nj] == 1) {
+                dfs(ni, nj);
+            }
+        }
+    }
+}
+```
+
+### BFS
+```java
+static void bfs(int sR, int sC) {
+    Queue<int[]> queue = new ArrayDeque<>();
+    queue.offer(new int[] {sR, sC});
+
+    visited[sR][sC] = true;
+
+    while (!queue.isEmpty()) {
+        int[] cur = queue.poll();
+        int r = cur[0];
+        int c = cur[1];
+
+        for (int d = 0; d < 4; d++) {
+            int nr = r + dr[d];
+            int nc = c + dc[d];
+
+            if (nr >= 0 && nr < R && nc >= 0 && nc < C && !visited[nr][nc]) {
+                if (map[nr][nc] == 1) {
+                    visited[nr][nc] = true;
+                    queue.offer(new int[] {nr, nc});
+                }
+            }
+        }
+    }
+}
+```
+
+### 다익스트라
+```java
+static void dijk (int start) {
+    int[] dist = new int[N + 1];
+    Arrays.fill(dist, Integer.MAX_VALUE);
+    
+    PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+
+    dist[start] = 0;
+    pq.offer(new int[] {start, 0});
+
+    while (!pq.isEmpty()) {
+        int[] cur = pq.poll();
+        int p = cur[0];
+        int w = cur[1];
+        
+        if (w > dist[p]) continue;
+        
+        for (Node next : graph.get(p)) {
+            if (dist[next.id] > dist[p] + next.weight) {
+                dist[next.id] = dist[p] + next.weight;
+                pq.offer(new int[] {next.id, dist[next.id]});
+            }
+        }
+    }
+}
+```
+
+### 플로이드
+
+### 투 포인터
+
+### 슬라이딩 윈도우
+
+### 이분탐색
+
+### 유니온 파인드
+
+### 그리드
+
+### DP
+
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 StringTokenizer st = new StringTokenizer(br.readLine());
