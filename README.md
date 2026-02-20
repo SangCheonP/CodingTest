@@ -113,19 +113,164 @@ static void dijk (int start) {
 ```
 
 ### 플로이드
+```java
+static void floyd () {
+    for (int i = 0; i < N; i++) {
+        Arrays.fill(dist[i], INF);
+        dist[i][i] = 0;
+    }
+    
+    for (int k = 0; k < N; k++) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (dist[i][k] != INF && dist[k][j] != INF && dist[i][j] > dist[i][k] + dist[k][j]) {
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+}
+```
 
 ### 투 포인터
+```java
+static void twoPointer() {
+    int right = 0;
+    int sum = 0;
+    int cnt = 0;
+
+    for (int left = 0; left < N; left++) {
+        while (right < N && sum < target) {
+            sum += arr[right];
+            right++;
+        }
+
+        if (sum == target) {
+            cnt++;
+        }
+
+        sum -= arr[left];
+    }
+}
+```
 
 ### 슬라이딩 윈도우
+```java
+static int slidingWindow(int K) {
+    int sum = 0;
+    int cnt = 0;
+    
+    for (int i = 0; i < K; i++) {
+        sum += arr[i];
+    }
+    
+    if (sum == target) cnt++;
+    
+    for (int i = K; i < N; i++) {
+        sum += arr[i];
+        sum -= arr[i - K];
+
+        if (sum == target) cnt++;
+    }
+
+    return cnt;
+}
+```
+
 
 ### 이분탐색
+```java
+static int binarySearch() {
+    int left = 0, right = N - 1;
+    Arrays.sort(arr);
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return -1;
+}
+```
 
 ### 유니온 파인드
+```java
+static int[] parent;
+static int[] rank;
+
+static void makeSet(int N) {
+    parent = new int[N + 1];
+    rank = new int[N + 1];
+    for (int i = 1; i <= N; i++) {
+        parent[i] = i;
+        rank[i] = 0;
+    }
+}
+
+static int find(int i) {
+    if (parent[i] == i) return i;
+    
+    return parent[i] = find(parent[i]);
+}
+
+static boolean union(int x, int y) {
+    int rootX = find(x);
+    int rootY = find(y);
+
+    if (rootX == rootY) return false;
+    
+    if (rank[rootX] < rank[rootY]) {
+        parent[rootX] = rootY;
+    } else if (rank[rootX] > rank[rootY]) {
+        parent[rootY] = rootX;
+    } else {
+        parent[rootY] = rootX;
+        rank[rootX]++;
+    }
+    return true;
+}
+```
 
 ### 그리드
+```java
+static int greedy(int target, int[] coins) {
+    int count = 0;
+    // 1. 큰 동전부터 써야 하므로 내림차순 정렬되어 있다고 가정
+    for (int coin : coins) {
+        if (target == 0) break;
+        
+        count += target / coin; // 현재 동전으로 줄 수 있는 최대 개수
+        target %= coin;         // 남은 잔돈
+    }
+    return count;
+}
+```
 
 ### DP
+```java
+static int dp(int n) {
+    int[] memo = new int[n + 1];
+    
+    memo[0] = 0;
+    memo[1] = 1;
+    
+    for (int i = 2; i <= n; i++) {
+        // 점화식: f(n) = f(n-1) + f(n-2)
+        memo[i] = memo[i - 1] + memo[i - 2];
+    }
+    
+    return memo[n];
+}
+```
 
+
+### 입/출력
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 StringTokenizer st = new StringTokenizer(br.readLine());
