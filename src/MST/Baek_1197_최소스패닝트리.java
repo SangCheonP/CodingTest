@@ -4,6 +4,8 @@ import java.util.*;
 import java.io.*;
 
 public class Baek_1197_최소스패닝트리 {
+    static int[] rank, parent;
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -14,80 +16,73 @@ public class Baek_1197_최소스패닝트리 {
         PriorityQueue<Edge> pq = new PriorityQueue<>();
         for (int i = 0; i < E; i++) {
             st = new StringTokenizer(br.readLine());
-
-            int A = Integer.parseInt(st.nextToken());
-            int B = Integer.parseInt(st.nextToken());
-            int C = Integer.parseInt(st.nextToken());
-
-            pq.offer(new Edge(A, B, C));
+            int s = Integer.parseInt(st.nextToken());
+            int e = Integer.parseInt(st.nextToken());
+            int w = Integer.parseInt(st.nextToken());
+            pq.offer(new Edge(s, e, w));
         }
 
-        int result = 0, cnt = 0;
-        Mst mst = new Mst(V);
-        while (!pq.isEmpty()) {
-            if (cnt == V - 1) break;
+        setMst(V);
 
+        int cnt = 0, result = 0;
+        while (cnt < V - 1) {
             Edge cur = pq.poll();
 
-            if (mst.union(cur.A, cur.B)) {
-                result += cur.C;
+            if (union(cur.x, cur.y)) {
+                cnt++;
+                result += cur.w;
             }
         }
 
         System.out.println(result);
     }
-}
 
-class Edge implements Comparable<Edge> {
-    int A, B, C;
-
-    public Edge(int A, int B, int C) {
-        this.A = A;
-        this.B = B;
-        this.C = C;
-    }
-
-    @Override
-    public int compareTo(Edge o) {
-        return this.C - o.C;
-    }
-}
-
-class Mst {
-    int[] rank, parent;
-
-    public Mst (int N) {
+    static void setMst(int N) {
         rank = new int[N + 1];
         parent = new int[N + 1];
 
         for (int i = 1; i <= N; i++) {
-            parent[i] = i;
             rank[i] = 0;
+            parent[i] = i;
         }
     }
 
-    int find (int n) {
-        if(parent[n] == n) return n;
+    static int find(int n) {
+        if (parent[n] == n) return n;
 
-        parent[n] = find(parent[n]);
-        return parent[n];
+        return parent[n] = find(parent[n]);
     }
 
-    boolean union (int x, int y) {
-        int xP = find(x);
-        int yP = find(y);
+    static boolean union(int x, int y) {
+        int rootX = find(x);
+        int rootY = find(y);
 
-        if (xP == yP) return false;
+        if (rootX == rootY) return false;
 
-        if (rank[xP] > rank[yP]) {
-            parent[yP] = xP;
-        } else if (rank[yP] > rank[xP]) {
-            parent[xP] = yP;
+        if (rank[rootX] > rank[rootY]) {
+            parent[rootY] = rootX;
+        } else if (rank[rootY] > rank[rootX]) {
+            parent[rootX] = rootY;
         } else {
-            parent[yP] = xP;
-            rank[xP]++;
+            parent[rootY] = rootX;
+            rank[rootX] += 1;
         }
 
         return true;
+    }
+}
+
+class Edge implements Comparable<Edge> {
+    int x, y, w;
+
+    public Edge(int x, int y, int w) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+    }
+
+    @Override
+    public int compareTo(Edge o) {
+        return this.w - o.w;
     }
 }
