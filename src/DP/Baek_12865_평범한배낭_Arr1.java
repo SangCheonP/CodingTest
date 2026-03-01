@@ -1,10 +1,7 @@
 package DP;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.io.*;
 
 public class Baek_12865_평범한배낭_Arr1 {
     public static void main(String[] args) throws IOException {
@@ -30,11 +27,8 @@ public class Baek_12865_평범한배낭_Arr1 {
 
         for (int i = 1; i <= N; i++) {
             for (int w = K; w >= 1; w--) {
-                if(items[i][0] > w){
-                    continue;
-                }else{
-                    map[w] = Math.max(map[w], map[w - items[i][0]] + items[i][1]);
-                }
+                if (items[i][0] > w) continue;
+                map[w] = Math.max(map[w], map[w - items[i][0]] + items[i][1]);
             }
         }
 
