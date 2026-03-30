@@ -237,6 +237,45 @@ static boolean union(int x, int y) {
 }
 ```
 
+### 위상정렬
+```java
+List<List<Integer>> graph = new ArrayList<>();
+int[] indegree = new int[N + 1];
+
+for (int i = 0; i <= N; i++) graph.add(new ArrayList<>());
+
+for (int[] edge : edges) {
+    int from = edge[0];
+    int to = edge[1];
+    graph.get(from).add(to);
+    indegree[to]++; // 목적지 노드의 진입 차수 증가
+}
+
+List<Integer> order = new ArrayList<>();
+Queue<Integer> queue = new LinkedList<>();
+
+// 진입 차수가 0인 노드를 먼저 큐에 삽입
+for (int i = 1; i <= N; i++) {
+    if (indegree[i] == 0) queue.offer(i);
+}
+
+while (!queue.isEmpty()) {
+    int cur = queue.poll();
+    order.add(cur);
+
+    // 현재 노드와 연결된 간선 제거
+    for (int next : graph.get(cur)) {
+        indegree[next]--;
+        
+        // 새롭게 진입 차수가 0이 된 노드를 큐에 삽입
+        if (indegree[next] == 0) {
+            queue.offer(next);
+        }
+    }
+}
+return order;
+```
+
 ### 그리드
 ```java
 static int greedy(int target, int[] coins) {
