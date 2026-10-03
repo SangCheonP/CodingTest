@@ -7,7 +7,7 @@
 1. [LeetCode 문제집](docs/leetcode/problemset.md)을 열고 1번부터 풉니다.
 2. 하루 **새 문제 1개**, 여유가 있으면 **오답 복습 1개**를 추가합니다.
 3. 풀이 코드는 [LeetCode 풀이 폴더](solutions/leetcode/README.md)에 저장합니다.
-4. 문제집의 최초 완료·독립 재풀이·날짜·소요 시간을 갱신하고 커밋합니다.
+4. 문제집의 최초 통과·독립 재풀이·날짜·소요 시간을 갱신하고 커밋합니다.
 
 주 6일 새 문제 + 하루 복습 기준 **기본 12주**, 매일 새 문제 2개면 **6주**입니다. 확장 문제는 추가 4주 또는 2주입니다. 문제집은 기업 기출의 재현 목록이 아니라 후기에서 확인한 유형을 연습하는 목록입니다.
 
@@ -35,7 +35,8 @@
 
 | 경로 | 내용 |
 |---|---|
-| [docs/leetcode/problemset.md](docs/leetcode/problemset.md) | 96문제 링크·학습 순서·체크·후기 출처·확장 기준 |
+| [docs/leetcode/problemset.md](docs/leetcode/problemset.md) | 96문제 링크·학습 순서·체크·확장 기준 |
+| [docs/leetcode/references.md](docs/leetcode/references.md) | 선정 근거·기업별 후기 출처·보완 방법 |
 | [solutions/leetcode/](solutions/leetcode/README.md) | 새 LeetCode 풀이 저장 규칙 |
 | [templates/solution-note.md](templates/solution-note.md) | 문제별 풀이·오답 기록 양식 |
 | [docs/reference/java-algorithms.md](docs/reference/java-algorithms.md) | 기존 README의 Java 알고리즘 정리 |
@@ -49,7 +50,8 @@
 - 실패한 입력과 시간·공간복잡도를 기록합니다.
 - 해설을 본 문제는 3일·7일 뒤 빈 화면에서 다시 풉니다.
 - 체크는 문제집 한 곳에서 관리하고, 자세한 내용은 문제별 노트에 적습니다.
-- 채점 통과한 코드만 정답으로 표시합니다. 미완성 코드는 노트에 상태를 적습니다.
+- 최초 통과는 LeetCode 채점 통과 시 `✅`, 미통과·채점 미확인은 `☐`로 표시합니다. 독립 재풀이는 힌트·해설 없이 다시 풀어 채점 통과했을 때 체크합니다.
+- 날짜는 `2026-10-02`, 소요 시간은 `20분`으로 통일합니다. 문제집에는 짧은 결과와 풀이 링크만 남기고 상세 오답은 노트에 적습니다.
 
 커밋 예시:
 
@@ -63,6 +65,6 @@ git commit -m "solve: LC 0001 Two Sum 풀이 및 오답 기록"
 
 기본 72문제 → 확장 24문제 순으로 진행합니다. 이후에는 완료 번호·약한 유형·평균 소요 시간·목표 기업을 바탕으로 20~30문제를 추가합니다. 새 문제는 기존 LC 번호와 중복되지 않도록 하고, 학습 순서는 97번부터 이어갑니다.
 
-기업별 후기 근거, 삼성 시뮬레이션 보완 및 SK AX 평가 방식에 관한 범위는 [문제집](docs/leetcode/problemset.md)에 정리했습니다.
+기업별 후기 근거, 삼성 시뮬레이션 보완 및 SK AX 평가 방식에 관한 범위는 [참고 자료](docs/leetcode/references.md)에 정리했습니다.
 
 요약: 문제집에서 다음 문제 확인 → 풀이·노트 작성 → 완료·복습 기록 → 커밋 순서로 관리합니다.
