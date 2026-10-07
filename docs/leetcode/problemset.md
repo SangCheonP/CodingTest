@@ -35,7 +35,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 3 | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | E | ☐ | ☐ | 2026-10-03 / 미기록 / 힌트 사용·채점 미확인 · [풀이](../../solutions/leetcode/0217-contains-duplicate/README.md) |
 | 4 | [387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | E | ✅ | ☐ | 2026-10-06 / 20분 / 정답·접근 직접 설명 · [풀이](../../solutions/leetcode/0387-first-unique-character-in-a-string/README.md) |
 | 5 | [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/) | M | ✅ | ☐ | 2026-10-07 / 20분 / 정답 · [풀이](../../solutions/leetcode/0049-group-anagrams/README.md) |
-| 6 | [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | M | ☐ | ☐ | |
+| 6 | [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | M | ✅ | ☐ | 2026-10-07 / 30분 / 정답·힌트 사용·복습 대상 · [풀이](../../solutions/leetcode/0128-longest-consecutive-sequence/README.md) |
 
 ### 2단계 / 추천 2주차 — 정렬·구간·스택
 
