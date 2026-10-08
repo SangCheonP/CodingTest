@@ -41,7 +41,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 7 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | E | ☐ | ☐ | |
+| 7 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | E | ✅ | ☐ | 2026-10-08 / 20분 / 원본 정답·코드 정리 · [풀이](../../solutions/leetcode/0020-valid-parentheses/README.md) |
 | 8 | [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | E | ☐ | ☐ | |
 | 9 | [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/) | M | ☐ | ☐ | |
 | 10 | [57. Insert Interval](https://leetcode.com/problems/insert-interval/) | M | ☐ | ☐ | |
