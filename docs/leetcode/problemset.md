@@ -44,7 +44,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 7 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | E | ✅ | ☐ | 2026-10-08 / 20분 / 원본 정답·코드 정리 · [풀이](../../solutions/leetcode/0020-valid-parentheses/README.md) |
 | 8 | [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | E | ✅ | ☐ | 2026-10-12 / 20분 / 정답 · [풀이](../../solutions/leetcode/1047-remove-all-adjacent-duplicates-in-string/README.md) |
 | 9 | [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/) | M | ✅ | ☐ | 2026-10-12 / 30분 / 정답 · [풀이](../../solutions/leetcode/0056-merge-intervals/README.md) |
-| 10 | [57. Insert Interval](https://leetcode.com/problems/insert-interval/) | M | ☐ | ☐ | 2026-10-13 / 약 30분 / 풀이 작성·PQ에서 순회로 개선·채점 미확인 · [풀이](../../solutions/leetcode/0057-insert-interval/README.md) |
+| 10 | [57. Insert Interval](https://leetcode.com/problems/insert-interval/) | M | ✅ | ☐ | 2026-10-13 / 약 30분 / 정답·PQ에서 순회로 개선 · [풀이](../../solutions/leetcode/0057-insert-interval/README.md) |
 | 11 | [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | M | ☐ | ☐ | |
 | 12 | [394. Decode String](https://leetcode.com/problems/decode-string/) | M | ☐ | ☐ | |
 
