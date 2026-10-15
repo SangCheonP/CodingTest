@@ -46,7 +46,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 9 | [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/) | M | ✅ | ☐ | 2026-10-12 / 30분 / 정답 · [풀이](../../solutions/leetcode/0056-merge-intervals/README.md) |
 | 10 | [57. Insert Interval](https://leetcode.com/problems/insert-interval/) | M | ✅ | ☐ | 2026-10-13 / 약 30분 / 정답·PQ에서 순회로 개선 · [풀이](../../solutions/leetcode/0057-insert-interval/README.md) |
 | 11 | [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | M | ☐ | ☐ | |
-| 12 | [394. Decode String](https://leetcode.com/problems/decode-string/) | M | ☐ | ☐ | |
+| 12 | [394. Decode String](https://leetcode.com/problems/decode-string/) | M | ✅ | ☐ | 2026-10-15 / 약 60분 / 정답·힌트 사용·닫는 괄호 처리 피드백 · [풀이](../../solutions/leetcode/0394-decode-string/README.md) |
 
 ### 3단계 / 추천 3주차 — 격자 구현·시뮬레이션
 
