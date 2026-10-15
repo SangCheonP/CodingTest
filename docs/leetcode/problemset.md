@@ -107,7 +107,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 43 | [704. Binary Search](https://leetcode.com/problems/binary-search/) | E | ☐ | ☐ | |
+| 43 | [704. Binary Search](https://leetcode.com/problems/binary-search/) | E | ✅ | ☐ | 2026-10-15 / 10분 / 정답 · [풀이](../../solutions/leetcode/0704-binary-search/README.md) |
 | 44 | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) | E | ☐ | ☐ | |
 | 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ☐ | ☐ | |
 | 46 | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | ☐ | ☐ | |
