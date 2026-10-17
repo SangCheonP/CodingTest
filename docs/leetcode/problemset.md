@@ -140,7 +140,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 61 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | E | ☐ | ☐ | |
+| 61 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | E | ✅ | ☐ | 2026-10-17 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0070-climbing-stairs/README.md) |
 | 62 | [198. House Robber](https://leetcode.com/problems/house-robber/) | M | ☐ | ☐ | |
 | 63 | [62. Unique Paths](https://leetcode.com/problems/unique-paths/) | M | ☐ | ☐ | |
 | 64 | [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | M | ☐ | ☐ | |
