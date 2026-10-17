@@ -52,7 +52,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 13 | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | M | ☐ | ☐ | |
+| 13 | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | M | ✅ | ☐ | 2026-10-17 / 약 60분 / 정답·반복문 경계 피드백 · [풀이](../../solutions/leetcode/0048-rotate-image/README.md) |
 | 14 | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | M | ☐ | ☐ | |
 | 15 | [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | M | ☐ | ☐ | |
 | 16 | [289. Game of Life](https://leetcode.com/problems/game-of-life/) | M | ☐ | ☐ | |
