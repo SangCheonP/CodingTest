@@ -63,7 +63,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 19 | [733. Flood Fill](https://leetcode.com/problems/flood-fill/) | E | ☐ | ☐ | |
+| 19 | [733. Flood Fill](https://leetcode.com/problems/flood-fill/) | E | ✅ | ☐ | 2026-10-18 / 20분 / 정답·독립 해결·힌트 미사용·풀이 후 개선 · [풀이](../../solutions/leetcode/0733-flood-fill/README.md) |
 | 20 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) | M | ☐ | ☐ | |
 | 21 | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M | ☐ | ☐ | |
 | 22 | [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | M | ☐ | ☐ | |
