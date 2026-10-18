@@ -96,7 +96,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 37 | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | M | ☐ | ☐ | |
+| 37 | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | M | ✅ | ☐ | 2026-10-18 / 20분 / 정답·설명 참고 후 공간복잡도 개선 · [풀이](../../solutions/leetcode/0167-two-sum-ii-input-array-is-sorted/README.md) |
 | 38 | [15. 3Sum](https://leetcode.com/problems/3sum/) | M | ☐ | ☐ | |
 | 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ☐ | ☐ | |
 | 40 | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | M | ☐ | ☐ | |
