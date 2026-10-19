@@ -85,7 +85,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 31 | [78. Subsets](https://leetcode.com/problems/subsets/) | M | ☐ | ☐ | |
+| 31 | [78. Subsets](https://leetcode.com/problems/subsets/) | M | ✅ | ☐ | 2026-10-19 / 30분 / 정답·인덱스 실수 수정 · [풀이](../../solutions/leetcode/0078-subsets/README.md) |
 | 32 | [77. Combinations](https://leetcode.com/problems/combinations/) | M | ☐ | ☐ | |
 | 33 | [46. Permutations](https://leetcode.com/problems/permutations/) | M | ☐ | ☐ | |
 | 34 | [39. Combination Sum](https://leetcode.com/problems/combination-sum/) | M | ☐ | ☐ | |
