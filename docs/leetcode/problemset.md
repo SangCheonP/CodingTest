@@ -74,7 +74,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 25 | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | M | ☐ | ☐ | |
+| 25 | [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | M | ✅ | ☐ | 2026-10-20 / 20분 / 정답·독립 해결·힌트 미사용·공유본 오타 수정 · [풀이](../../solutions/leetcode/0994-rotting-oranges/README.md) |
 | 26 | [542. 01 Matrix](https://leetcode.com/problems/01-matrix/) | M | ☐ | ☐ | |
 | 27 | [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | M | ☐ | ☐ | |
 | 28 | [1926. Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/) | M | ☐ | ☐ | |
