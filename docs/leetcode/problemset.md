@@ -111,7 +111,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 44 | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) | E | ☐ | ☐ | |
 | 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ☐ | ☐ | |
 | 46 | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | ☐ | ☐ | |
-| 47 | [55. Jump Game](https://leetcode.com/problems/jump-game/) | M | ☐ | ☐ | |
+| 47 | [55. Jump Game](https://leetcode.com/problems/jump-game/) | M | ✅ | ☐ | 2026-10-20 / 약 30분 / 정답·힌트 사용 후 그리디로 개선 · [풀이](../../solutions/leetcode/0055-jump-game/README.md) |
 | 48 | [134. Gas Station](https://leetcode.com/problems/gas-station/) | M | ☐ | ☐ | |
 
 ### 9단계 / 추천 9주차 — 힙·위상정렬·유니온파인드
