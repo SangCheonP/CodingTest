@@ -100,7 +100,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 38 | [15. 3Sum](https://leetcode.com/problems/3sum/) | M | ☐ | ☐ | |
 | 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ☐ | ☐ | |
 | 40 | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | M | ☐ | ☐ | |
-| 41 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | ☐ | ☐ | |
+| 41 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·복습 연기 · [풀이](../../solutions/leetcode/0560-subarray-sum-equals-k/README.md) |
 | 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ☐ | ☐ | |
 
 ### 8단계 / 추천 8주차 — 이분탐색·그리디
@@ -131,9 +131,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 |---|---|---|---|---|---|
 | 55 | [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/) | M | ☐ | ☐ | |
 | 56 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | M | ☐ | ☐ | |
-| 57 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | M | ☐ | ☐ | |
-| 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·DFS 및 BFS 풀이 · [풀이](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md) |
-| 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ☐ | ☐ | |
+| 57 | [1334. Find…155 tokens truncated…tree-level-order-traversal/) | M | ☐ | ☐ | |
 | 60 | [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | M | ☐ | ☐ | |
 
 ### 11단계 / 추천 11주차 — DP 기초
