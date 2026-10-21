@@ -132,7 +132,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 55 | [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/) | M | ☐ | ☐ | |
 | 56 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | M | ☐ | ☐ | |
 | 57 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | M | ☐ | ☐ | |
-| 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ☐ | ☐ | |
+| 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·DFS 및 BFS 풀이 · [풀이](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md) |
 | 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ☐ | ☐ | |
 | 60 | [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | M | ☐ | ☐ | |
 
