@@ -120,7 +120,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 |---|---|---|---|---|---|
 | 49 | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | M | ✅ | ☐ | 2026-10-19 / 약 10분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0215-kth-largest-element-in-an-array/README.md) |
 | 50 | [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | M | ☐ | ☐ | |
-| 51 | [207. Course Schedule](https://leetcode.com/problems/course-schedule/) | M | ☐ | ☐ | |
+| 51 | [207. Course Schedule](https://leetcode.com/problems/course-schedule/) | M | ✅ | ☐ | 2026-10-22 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0207-course-schedule/README.md) |
 | 52 | [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | M | ☐ | ☐ | |
 | 53 | [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/) | M | ☐ | ☐ | |
 | 54 | [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/) | M | ☐ | ☐ | |
