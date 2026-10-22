@@ -122,7 +122,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 | 50 | [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | M | ☐ | ☐ | |
 | 51 | [207. Course Schedule](https://leetcode.com/problems/course-schedule/) | M | ✅ | ☐ | 2026-10-22 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0207-course-schedule/README.md) |
 | 52 | [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | M | ☐ | ☐ | |
-| 53 | [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/) | M | ☐ | ☐ | |
+| 53 | [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/) | M | ✅ | ☐ | 2026-10-22 / 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0684-redundant-connection/README.md) |
 | 54 | [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/) | M | ☐ | ☐ | |
 
 ### 10단계 / 추천 10주차 — 가중 그래프·트리
