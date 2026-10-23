@@ -129,7 +129,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목을 누르면 LeetCode로 이동한다.
 
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 |
 |---|---|---|---|---|---|
-| 55 | [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/) | M | ☐ | ☐ | 2026-10-23 / 40분 / 코드 작성·채점 미확인·힌트 여부 미기록·visited 방식 · [풀이](../../solutions/leetcode/0743-network-delay-time/README.md) |
+| 55 | [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/) | M | ✅ | ☐ | 2026-10-23 / 40분 / 정답·다익스트라 코드 큰 틀 참고·visited 방식 · [풀이](../../solutions/leetcode/0743-network-delay-time/README.md) |
 | 56 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | M | ☐ | ☐ | |
 | 57 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | M | ☐ | ☐ | |
 | 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·재귀 및 BFS · [풀이](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md) |
