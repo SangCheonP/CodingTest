@@ -19,7 +19,6 @@
 - [그래프](#그래프)
 - [완전탐색과 DP](#완전탐색과-dp)
 - [연결 리스트와 트리](#연결-리스트와-트리)
-- [제출 전 점검](#제출-전-점검)
 
 ## 정렬과 배열
 
@@ -802,28 +801,5 @@ static int depth(TreeNode root) {
 - 단순 BST 삽입·검색: O(h), 편향 시 O(n)
 - 깊이 탐색: 시간 O(V), 재귀 공간 O(h)
 - [LC104 두 구현](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md)
-
-## 제출 전 점검
-
-- 배열.length / 문자열.length() / 컬렉션.size() 구분.
-- 0-based와 1-based, 닫힌 구간과 반열린 구간 확인.
-- 합·곱·거리 계산 전에 long 승격. INF에 덧셈하지 않기.
-- 빈 큐의 null 언박싱, 빈 리스트 인덱스 접근 확인.
-- BFS는 삽입 시 방문, 다익스트라는 최소 거리 추출 시 확정.
-- Union-Find는 원소가 아닌 루트끼리 연결.
-- 재귀 상태 복구 및 결과 복사, 여러 테스트 간 상태 초기화.
-- 정렬이 입력을 변경해도 되는지, Comparator가 일관되는지 확인.
-- 음수가 있는 합 문제에서 포인터 이동의 단조성을 가정하지 않기.
-- 파일 존재·로컬 테스트와 실제 온라인 채점 통과를 구분.
-
-## 공식 API 참고
-
-Java 17 공식 API. 알고리즘 예제는 각 절의 입력 조건 확인.
-- [Arrays](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html)
-- [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html)
-- [Map](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html)
-- [Deque](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html)
-- [PriorityQueue](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/PriorityQueue.html)
-- [TreeSet](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html)
 
 [문제집으로 돌아가기](../leetcode/problemset.md)
