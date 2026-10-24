@@ -552,21 +552,23 @@ String[] wordArray = editable.toArray(new String[0]);
 
 | 입력·요구 조건 | 후보 | 주의 |
 |---|---|---|
-| 모든 후보가 적음 | 완전탐색·백트래킹 | 상태 수와 결과 복사 비용 포함 |
-| 연결 여부·도달 가능성 | DFS/BFS | 방문 상태의 범위 정의 |
-| 동일 비용 최단거리 | BFS | 큐에 넣을 때 방문 표시 |
-| 음수 없는 가중치 최단거리 | 다익스트라 | 최소 거리로 꺼낼 때 확정 |
-| 모든 쌍 거리, 작은 V | 플로이드-워셜 | O(V³), 음수 사이클 주의 |
-| 음수 간선의 단일 시작점 거리 | 벨만-포드 | O(VE), 도달 가능한 음수 사이클 판별 |
-| 연결 집합 병합 | Union-Find | 루트끼리 연결 |
-| 선수 조건·작업 순서 | 위상 정렬 | 방향 그래프, 사이클이면 전체 정렬 불가 |
-| 모든 정점을 최소 비용으로 연결 | MST | 최단 경로 문제와 구분 |
-| 정렬된 배열·단조 판정 | 이분 탐색 | 경계와 구간 정의 |
-| 연속 구간 합 | 누적합·윈도우 | 가변 합 윈도우의 단조성 확인 |
-| 겹치는 부분 문제 | DP | 상태·초기값·전이·계산 순서 |
-| 매번 최선 선택 | 그리디 | 선택이 전체 최적을 보장한다는 근거 필요 |
+| 모든 후보가 적음 | [완전탐색·백트래킹](#example-backtracking) | 상태 수와 결과 복사 비용 포함 |
+| 연결 여부·도달 가능성 | [DFS/BFS](#example-traversal) | 방문 상태의 범위 정의 |
+| 동일 비용 최단거리 | [BFS](#example-traversal) | 큐에 넣을 때 방문 표시 |
+| 음수 없는 가중치 최단거리 | [다익스트라](#example-dijkstra) | 최소 거리로 꺼낼 때 확정 |
+| 모든 쌍 거리, 작은 V | [플로이드-워셜](#example-floyd) | O(V³), 음수 사이클 주의 |
+| 음수 간선의 단일 시작점 거리 | [벨만-포드](#example-bellman-ford) | O(VE), 도달 가능한 음수 사이클 판별 |
+| 연결 집합 병합 | [Union-Find](#example-union-find) | 루트끼리 연결 |
+| 선수 조건·작업 순서 | [위상 정렬](#example-topological) | 방향 그래프, 사이클이면 전체 정렬 불가 |
+| 모든 정점을 최소 비용으로 연결 | [MST](#example-mst) | 최단 경로 문제와 구분 |
+| 정렬된 배열·단조 판정 | [이분 탐색](#example-binary-search) | 경계와 구간 정의 |
+| 연속 구간 합 | [누적합](#example-prefix) · [윈도우](#example-window) | 가변 합 윈도우의 단조성 확인 |
+| 겹치는 부분 문제 | [DP](#example-dp) | 상태·초기값·전이·계산 순서 |
+| 매번 최선 선택 | [그리디](#example-greedy) | 선택이 전체 최적을 보장한다는 근거 필요 |
 
 ### 탐색과 구간
+
+<a id="example-binary-search"></a>
 
 #### 이분 탐색
 
@@ -588,6 +590,8 @@ static int lowerBound(int[] a, int target) {
 // 값의 존재: pos < a.length && a[pos] == target.
 // 중복 개수: upperBound - lowerBound.
 ```
+
+<a id="example-window"></a>
 
 #### 투 포인터·슬라이딩 윈도우
 
@@ -616,6 +620,8 @@ static long maxWindow(int[] a, int k) {
 - 0 포함: 같은 합의 여러 구간 주의
 - 문자 중복 등 다른 조건: 조건 유지·복구 가능 여부 확인
 
+<a id="example-prefix"></a>
+
 #### 누적합
 
 ```java
@@ -642,6 +648,8 @@ long rangeSum = prefix[r] - prefix[l]; // [l, r), 질의 O(1)
 단조 스택: 각 원소 최대 1회 삽입·제거 → O(n).
 
 ### 그래프
+
+<a id="example-traversal"></a>
 
 #### 표현·DFS·BFS
 
@@ -687,6 +695,8 @@ static int[] bfs(int start, List<List<Integer>> graph) {
 - 검사: 범위 → 이동 조건 → 방문 여부
 - 다중 시작점: 시작점 모두 거리 0으로 큐에 삽입
 - 레벨 처리: 시작 시 `q.size()` 저장 → 그 개수만 처리
+
+<a id="example-dijkstra"></a>
 
 #### 다익스트라
 
@@ -736,6 +746,8 @@ static long[] dijkstra(List<List<int[]>> graph, int start) {
 - **시간:** O(V + E log(E + 1)) / **공간:** O(V + E)
 - [LC743 최종 코드](solutions/leetcode/0743-network-delay-time/Solution.java)
 
+<a id="example-floyd"></a>
+
 #### 플로이드-워셜
 
 - **목적:** 작은 그래프의 모든 쌍 최단거리
@@ -768,6 +780,43 @@ static long[][] floyd(int n, int[][] edges) {
 
 - 거리 합: `long` 범위 확인
 - 무방향 간선: 반대 방향도 초기화
+
+<a id="example-bellman-ford"></a>
+
+#### 벨만-포드
+
+- **기준:** 0-based 방향 간선 `{출발, 도착, 비용}`
+- **조건:** 거리 계산이 `long` 범위 안이고 유한 최단거리가 `INF` 미만
+- **반환:** 시작점별 거리. 도달 불가는 `INF`
+- 도달 가능한 음수 사이클 → 예외
+- **시간:** O(VE) / **공간:** O(V)
+
+```java
+static long[] bellmanFord(int n, int[][] edges, int start) {
+    final long INF = Long.MAX_VALUE / 4;
+    long[] dist = new long[n];
+    Arrays.fill(dist, INF);
+    dist[start] = 0;
+    for (int pass = 0; pass < n; pass++) {
+        boolean changed = false;
+        for (int[] e : edges) {
+            int u = e[0], v = e[1];
+            if (dist[u] == INF) continue; // 도달하지 못한 정점 제외
+            long candidate = dist[u] + e[2];
+            if (candidate >= dist[v]) continue;
+            if (pass == n - 1) { // V번째에도 갱신되면 음수 사이클
+                throw new IllegalArgumentException("도달 가능한 음수 사이클");
+            }
+            dist[v] = candidate;
+            changed = true;
+        }
+        if (!changed) break;
+    }
+    return dist;
+}
+```
+
+<a id="example-union-find"></a>
 
 #### Union-Find
 
@@ -802,6 +851,8 @@ static class UnionFind {
 - 경로 압축 후 `rank` ≠ 실제 높이일 수 있음
 - 방향 그래프 사이클 판별에 그대로 적용 금지
 
+<a id="example-topological"></a>
+
 #### 위상 정렬
 
 - **기준:** 0-based 방향 그래프
@@ -828,6 +879,8 @@ static List<Integer> topological(List<List<Integer>> graph) {
 }
 ```
 
+<a id="example-mst"></a>
+
 #### 최소 신장 트리: Kruskal
 
 - **목적:** 무방향 그래프 전체 연결의 최소 비용
@@ -853,6 +906,8 @@ static long kruskal(int n, int[][] edges) {
 ```
 
 ### 완전탐색과 DP
+
+<a id="example-backtracking"></a>
 
 #### 순열·조합·부분집합
 
@@ -909,6 +964,8 @@ static void subsets(int[] a, int start,
 | 부분집합 | O(n×2^n) |
 | r개 조합 | 결과 복사만 O(r×C(n,r)) |
 
+<a id="example-greedy"></a>
+
 #### 그리디
 
 - 현재 선택이 전체 최적을 보장하는지 확인
@@ -916,6 +973,8 @@ static void subsets(int[] a, int start,
 - 반례: `{4,3,1}`, 목표 6 → `4+1+1`보다 `3+3`
 - 증명 도구: 교환 논증·불변식
 - [LC55 기록](solutions/leetcode/0055-jump-game/README.md)
+
+<a id="example-dp"></a>
 
 #### DP
 
