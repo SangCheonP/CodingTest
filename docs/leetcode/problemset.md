@@ -111,7 +111,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 |---|---|---|---|---|---|---|
 | 37 | [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | M | ✅ | ☐ | 2026-10-18 / 20분 / 정답·설명 참고 후 공간복잡도 개선 · [풀이](../../solutions/leetcode/0167-two-sum-ii-input-array-is-sorted/README.md) | [코드](../../solutions/leetcode/0167-two-sum-ii-input-array-is-sorted/Solution.java) |
 | 38 | [15. 3Sum](https://leetcode.com/problems/3sum/) | M | ☐ | ☐ | | 미등록 |
-| 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ☐ | ☐ | | 미등록 |
+| 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ✅ | ☐ | 2026-10-26 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0003-longest-substring-without-repeating-characters/README.md) | [코드](../../solutions/leetcode/0003-longest-substring-without-repeating-characters/Solution.java) |
 | 40 | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | M | ☐ | ☐ | | 미등록 |
 | 41 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·복습 연기 · [풀이](../../solutions/leetcode/0560-subarray-sum-equals-k/README.md) | [코드](../../solutions/leetcode/0560-subarray-sum-equals-k/Solution.java) |
 | 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ☐ | ☐ | | 미등록 |
