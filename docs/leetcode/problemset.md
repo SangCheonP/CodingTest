@@ -162,7 +162,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 61 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | E | ✅ | ☐ | 2026-10-17 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0070-climbing-stairs/README.md) | [코드](../../solutions/leetcode/0070-climbing-stairs/Solution.java) |
-| 62 | [198. House Robber](https://leetcode.com/problems/house-robber/) | M | ☐ | ☐ | | 미등록 |
+| 62 | [198. House Robber](https://leetcode.com/problems/house-robber/) | M | ✅ | ☐ | 2026-10-26 / 20분 / 정답·힌트 미사용·DP 배열에서 두 변수로 개선 · [풀이](../../solutions/leetcode/0198-house-robber/README.md) | [코드](../../solutions/leetcode/0198-house-robber/Solution.java) |
 | 63 | [62. Unique Paths](https://leetcode.com/problems/unique-paths/) | M | ☐ | ☐ | | 미등록 |
 | 64 | [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | M | ☐ | ☐ | | 미등록 |
 | 65 | [322. Coin Change](https://leetcode.com/problems/coin-change/) | M | ☐ | ☐ | | 미등록 |

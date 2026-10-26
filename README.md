@@ -20,7 +20,7 @@
 | 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 2 / 6 |
 | 기본 9 | [49~54](#stage-09) | [힙·위상정렬·유니온파인드](#stage-09) | 3 / 6 |
 | 기본 10 | [55~60](#stage-10) | [가중 그래프·트리](#stage-10) | 2 / 6 |
-| 기본 11 | [61~66](#stage-11) | [DP 기초](#stage-11) | 1 / 6 |
+| 기본 11 | [61~66](#stage-11) | [DP 기초](#stage-11) | 2 / 6 |
 | 기본 12 | [67~72](#stage-12) | [DP 심화·복합 구현](#stage-12) | 0 / 6 |
 | 확장 1 | [73~78](#stage-13) | [확장 A · 탐색·자료구조](#stage-13) | 0 / 6 |
 | 확장 2 | [79~84](#stage-14) | [확장 B · 완전탐색·BFS](#stage-14) | 0 / 6 |
@@ -172,7 +172,7 @@
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 61 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | E | ✅ | ☐ | 2026-10-17 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](solutions/leetcode/0070-climbing-stairs/README.md) | [코드](solutions/leetcode/0070-climbing-stairs/Solution.java) |
-| 62 | [198. House Robber](https://leetcode.com/problems/house-robber/) | M | ☐ | ☐ | | 미등록 |
+| 62 | [198. House Robber](https://leetcode.com/problems/house-robber/) | M | ✅ | ☐ | 2026-10-26 / 20분 / 정답·힌트 미사용·DP 배열에서 두 변수로 개선 · [풀이](solutions/leetcode/0198-house-robber/README.md) | [코드](solutions/leetcode/0198-house-robber/Solution.java) |
 | 63 | [62. Unique Paths](https://leetcode.com/problems/unique-paths/) | M | ☐ | ☐ | | 미등록 |
 | 64 | [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | M | ☐ | ☐ | | 미등록 |
 | 65 | [322. Coin Change](https://leetcode.com/problems/coin-change/) | M | ☐ | ☐ | | 미등록 |
