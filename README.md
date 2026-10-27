@@ -13,7 +13,7 @@
 | 기본 1 | [1~6](#stage-01) | [배열·문자열·해시](#stage-01) | 5 / 6 |
 | 기본 2 | [7~12](#stage-02) | [정렬·구간·스택](#stage-02) | 5 / 6 |
 | 기본 3 | [13~18](#stage-03) | [격자 구현·시뮬레이션](#stage-03) | 1 / 6 |
-| 기본 4 | [19~24](#stage-04) | [DFS·연결요소](#stage-04) | 1 / 6 |
+| 기본 4 | [19~24](#stage-04) | [DFS·연결요소](#stage-04) | 2 / 6 |
 | 기본 5 | [25~30](#stage-05) | [BFS·최단거리](#stage-05) | 1 / 6 |
 | 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 1 / 6 |
 | 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 3 / 6 |
@@ -81,7 +81,7 @@
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 19 | [733. Flood Fill](https://leetcode.com/problems/flood-fill/) | E | ✅ | ☐ | 2026-10-18 / 20분 / 정답·독립 해결·힌트 미사용·풀이 후 개선 · [풀이](solutions/leetcode/0733-flood-fill/README.md) | [코드](solutions/leetcode/0733-flood-fill/Solution.java) |
-| 20 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) | M | ☐ | ☐ | | 미등록 |
+| 20 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) | M | ✅ | ☐ | 2026-10-27 / 약 20분 / 정답·독립 해결·힌트 미사용·풀이 후 반환형 정리 · [풀이](solutions/leetcode/0200-number-of-islands/README.md) | [코드](solutions/leetcode/0200-number-of-islands/Solution.java) |
 | 21 | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M | ☐ | ☐ | | 미등록 |
 | 22 | [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | M | ☐ | ☐ | | 미등록 |
 | 23 | [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | M | ☐ | ☐ | | 미등록 |

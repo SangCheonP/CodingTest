@@ -71,7 +71,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 19 | [733. Flood Fill](https://leetcode.com/problems/flood-fill/) | E | ✅ | ☐ | 2026-10-18 / 20분 / 정답·독립 해결·힌트 미사용·풀이 후 개선 · [풀이](../../solutions/leetcode/0733-flood-fill/README.md) | [코드](../../solutions/leetcode/0733-flood-fill/Solution.java) |
-| 20 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) | M | ☐ | ☐ | | 미등록 |
+| 20 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/) | M | ✅ | ☐ | 2026-10-27 / 약 20분 / 정답·독립 해결·힌트 미사용·풀이 후 반환형 정리 · [풀이](../../solutions/leetcode/0200-number-of-islands/README.md) | [코드](../../solutions/leetcode/0200-number-of-islands/Solution.java) |
 | 21 | [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M | ☐ | ☐ | | 미등록 |
 | 22 | [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | M | ☐ | ☐ | | 미등록 |
 | 23 | [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | M | ☐ | ☐ | | 미등록 |
