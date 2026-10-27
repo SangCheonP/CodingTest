@@ -17,7 +17,7 @@
 | 기본 5 | [25~30](#stage-05) | [BFS·최단거리](#stage-05) | 1 / 6 |
 | 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 1 / 6 |
 | 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 3 / 6 |
-| 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 2 / 6 |
+| 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 3 / 6 |
 | 기본 9 | [49~54](#stage-09) | [힙·위상정렬·유니온파인드](#stage-09) | 3 / 6 |
 | 기본 10 | [55~60](#stage-10) | [가중 그래프·트리](#stage-10) | 2 / 6 |
 | 기본 11 | [61~66](#stage-11) | [DP 기초](#stage-11) | 2 / 6 |
@@ -134,7 +134,7 @@
 |---|---|---|---|---|---|---|
 | 43 | [704. Binary Search](https://leetcode.com/problems/binary-search/) | E | ✅ | ☐ | 2026-10-15 / 10분 / 정답 · [풀이](solutions/leetcode/0704-binary-search/README.md) | [코드](solutions/leetcode/0704-binary-search/Solution.java) |
 | 44 | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) | E | ☐ | ☐ | | 미등록 |
-| 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ☐ | ☐ | | 미등록 |
+| 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ✅ | ☐ | 2026-10-27 / 30분 / 정답·힌트 사용·이분탐색 2회로 개선 · [풀이](solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/README.md) | [코드](solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/Solution.java) |
 | 46 | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | ☐ | ☐ | | 미등록 |
 | 47 | [55. Jump Game](https://leetcode.com/problems/jump-game/) | M | ✅ | ☐ | 2026-10-20 / 약 30분 / 정답·힌트 사용 후 그리디로 개선 · [풀이](solutions/leetcode/0055-jump-game/README.md) | [코드](solutions/leetcode/0055-jump-game/Solution.java) |
 | 48 | [134. Gas Station](https://leetcode.com/problems/gas-station/) | M | ☐ | ☐ | | 미등록 |

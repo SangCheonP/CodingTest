@@ -124,7 +124,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 |---|---|---|---|---|---|---|
 | 43 | [704. Binary Search](https://leetcode.com/problems/binary-search/) | E | ✅ | ☐ | 2026-10-15 / 10분 / 정답 · [풀이](../../solutions/leetcode/0704-binary-search/README.md) | [코드](../../solutions/leetcode/0704-binary-search/Solution.java) |
 | 44 | [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/) | E | ☐ | ☐ | | 미등록 |
-| 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ☐ | ☐ | | 미등록 |
+| 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ✅ | ☐ | 2026-10-27 / 30분 / 정답·힌트 사용·이분탐색 2회로 개선 · [풀이](../../solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/README.md) | [코드](../../solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/Solution.java) |
 | 46 | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | ☐ | ☐ | | 미등록 |
 | 47 | [55. Jump Game](https://leetcode.com/problems/jump-game/) | M | ✅ | ☐ | 2026-10-20 / 약 30분 / 정답·힌트 사용 후 그리디로 개선 · [풀이](../../solutions/leetcode/0055-jump-game/README.md) | [코드](../../solutions/leetcode/0055-jump-game/Solution.java) |
 | 48 | [134. Gas Station](https://leetcode.com/problems/gas-station/) | M | ☐ | ☐ | | 미등록 |
