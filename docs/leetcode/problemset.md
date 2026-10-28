@@ -136,7 +136,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 49 | [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | M | ✅ | ☐ | 2026-10-19 / 약 10분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0215-kth-largest-element-in-an-array/README.md) | [코드](../../solutions/leetcode/0215-kth-largest-element-in-an-array/Solution.java) |
-| 50 | [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | M | ☐ | ☐ | | 미등록 |
+| 50 | [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | M | ✅ | ☐ | 2026-10-28 / 약 30분 / 정답 보고·최초 힌트 미사용·비교식 수정본 재채점 미확인 · [풀이](../../solutions/leetcode/0347-top-k-frequent-elements/README.md) | [코드](../../solutions/leetcode/0347-top-k-frequent-elements/Solution.java) |
 | 51 | [207. Course Schedule](https://leetcode.com/problems/course-schedule/) | M | ✅ | ☐ | 2026-10-22 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0207-course-schedule/README.md) | [코드](../../solutions/leetcode/0207-course-schedule/Solution.java) |
 | 52 | [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | M | ☐ | ☐ | | 미등록 |
 | 53 | [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/) | M | ✅ | ☐ | 2026-10-22 / 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0684-redundant-connection/README.md) | [코드](../../solutions/leetcode/0684-redundant-connection/Solution.java) |
