@@ -15,7 +15,7 @@
 | 기본 3 | [13~18](#stage-03) | [격자 구현·시뮬레이션](#stage-03) | 1 / 6 |
 | 기본 4 | [19~24](#stage-04) | [DFS·연결요소](#stage-04) | 2 / 6 |
 | 기본 5 | [25~30](#stage-05) | [BFS·최단거리](#stage-05) | 1 / 6 |
-| 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 1 / 6 |
+| 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 2 / 6 |
 | 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 3 / 6 |
 | 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 3 / 6 |
 | 기본 9 | [49~54](#stage-09) | [힙·위상정렬·유니온파인드](#stage-09) | 3 / 6 |
@@ -108,7 +108,7 @@
 |---|---|---|---|---|---|---|
 | 31 | [78. Subsets](https://leetcode.com/problems/subsets/) | M | ✅ | ☐ | 2026-10-19 / 30분 / 정답·인덱스 실수 수정 · [풀이](solutions/leetcode/0078-subsets/README.md) | [코드](solutions/leetcode/0078-subsets/Solution.java) |
 | 32 | [77. Combinations](https://leetcode.com/problems/combinations/) | M | ☐ | ☐ | | 미등록 |
-| 33 | [46. Permutations](https://leetcode.com/problems/permutations/) | M | ☐ | ☐ | | 미등록 |
+| 33 | [46. Permutations](https://leetcode.com/problems/permutations/) | M | ✅ | ☐ | 2026-10-28 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](solutions/leetcode/0046-permutations/README.md) | [코드](solutions/leetcode/0046-permutations/Solution.java) |
 | 34 | [39. Combination Sum](https://leetcode.com/problems/combination-sum/) | M | ☐ | ☐ | | 미등록 |
 | 35 | [79. Word Search](https://leetcode.com/problems/word-search/) | M | ☐ | ☐ | | 미등록 |
 | 36 | [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | M | ☐ | ☐ | | 미등록 |

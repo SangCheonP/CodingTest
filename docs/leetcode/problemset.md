@@ -98,7 +98,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 |---|---|---|---|---|---|---|
 | 31 | [78. Subsets](https://leetcode.com/problems/subsets/) | M | ✅ | ☐ | 2026-10-19 / 30분 / 정답·인덱스 실수 수정 · [풀이](../../solutions/leetcode/0078-subsets/README.md) | [코드](../../solutions/leetcode/0078-subsets/Solution.java) |
 | 32 | [77. Combinations](https://leetcode.com/problems/combinations/) | M | ☐ | ☐ | | 미등록 |
-| 33 | [46. Permutations](https://leetcode.com/problems/permutations/) | M | ☐ | ☐ | | 미등록 |
+| 33 | [46. Permutations](https://leetcode.com/problems/permutations/) | M | ✅ | ☐ | 2026-10-28 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0046-permutations/README.md) | [코드](../../solutions/leetcode/0046-permutations/Solution.java) |
 | 34 | [39. Combination Sum](https://leetcode.com/problems/combination-sum/) | M | ☐ | ☐ | | 미등록 |
 | 35 | [79. Word Search](https://leetcode.com/problems/word-search/) | M | ☐ | ☐ | | 미등록 |
 | 36 | [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/) | M | ☐ | ☐ | | 미등록 |
