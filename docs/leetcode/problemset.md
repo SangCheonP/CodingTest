@@ -152,7 +152,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 56 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | M | ☐ | ☐ | | 미등록 |
 | 57 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | M | ☐ | ☐ | | 미등록 |
 | 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·재귀 및 BFS · [풀이](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md) | [재귀](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/Solution.java) · [BFS](../../solutions/leetcode/0104-maximum-depth-of-binary-tree/SolutionBfs.java) |
-| 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ☐ | ☐ | | 미등록 |
+| 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ✅ | ☐ | 2026-10-29 / 30분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0102-binary-tree-level-order-traversal/README.md) | [코드](../../solutions/leetcode/0102-binary-tree-level-order-traversal/Solution.java) |
 | 60 | [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | M | ☐ | ☐ | | 미등록 |
 
 <a id="stage-11"></a>

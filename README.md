@@ -19,7 +19,7 @@
 | 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 3 / 6 |
 | 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 3 / 6 |
 | 기본 9 | [49~54](#stage-09) | [힙·위상정렬·유니온파인드](#stage-09) | 4 / 6 |
-| 기본 10 | [55~60](#stage-10) | [가중 그래프·트리](#stage-10) | 2 / 6 |
+| 기본 10 | [55~60](#stage-10) | [가중 그래프·트리](#stage-10) | 3 / 6 |
 | 기본 11 | [61~66](#stage-11) | [DP 기초](#stage-11) | 2 / 6 |
 | 기본 12 | [67~72](#stage-12) | [DP 심화·복합 구현](#stage-12) | 0 / 6 |
 | 확장 1 | [73~78](#stage-13) | [확장 A · 탐색·자료구조](#stage-13) | 0 / 6 |
@@ -162,7 +162,7 @@
 | 56 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/) | M | ☐ | ☐ | | 미등록 |
 | 57 | [1334. Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | M | ☐ | ☐ | | 미등록 |
 | 58 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | E | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·재귀 및 BFS · [풀이](solutions/leetcode/0104-maximum-depth-of-binary-tree/README.md) | [재귀](solutions/leetcode/0104-maximum-depth-of-binary-tree/Solution.java) · [BFS](solutions/leetcode/0104-maximum-depth-of-binary-tree/SolutionBfs.java) |
-| 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ☐ | ☐ | | 미등록 |
+| 59 | [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | M | ✅ | ☐ | 2026-10-29 / 30분 / 정답·독립 해결·힌트 미사용 · [풀이](solutions/leetcode/0102-binary-tree-level-order-traversal/README.md) | [코드](solutions/leetcode/0102-binary-tree-level-order-traversal/Solution.java) |
 | 60 | [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | M | ☐ | ☐ | | 미등록 |
 
 <a id="stage-11"></a>
