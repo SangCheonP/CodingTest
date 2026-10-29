@@ -12,7 +12,7 @@
 |---|---|---|---|
 | 기본 1 | [1~6](#stage-01) | [배열·문자열·해시](#stage-01) | 5 / 6 |
 | 기본 2 | [7~12](#stage-02) | [정렬·구간·스택](#stage-02) | 5 / 6 |
-| 기본 3 | [13~18](#stage-03) | [격자 구현·시뮬레이션](#stage-03) | 1 / 6 |
+| 기본 3 | [13~18](#stage-03) | [격자 구현·시뮬레이션](#stage-03) | 2 / 6 |
 | 기본 4 | [19~24](#stage-04) | [DFS·연결요소](#stage-04) | 2 / 6 |
 | 기본 5 | [25~30](#stage-05) | [BFS·최단거리](#stage-05) | 1 / 6 |
 | 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 2 / 6 |
@@ -68,7 +68,7 @@
 | 순서 | LC 번호 / 문제 | 난도 | 최초 통과 | 독립 재풀이 | 날짜 / 시간 / 결과·풀이 | 코드 |
 |---|---|---|---|---|---|---|
 | 13 | [48. Rotate Image](https://leetcode.com/problems/rotate-image/) | M | ✅ | ☐ | 2026-10-17 / 약 60분 / 정답·반복문 경계 피드백 · [풀이](solutions/leetcode/0048-rotate-image/README.md) | [코드](solutions/leetcode/0048-rotate-image/Solution.java) |
-| 14 | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | M | ☐ | ☐ | | 미등록 |
+| 14 | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | M | ✅ | ☐ | 2026-10-29 / 약 30분 / 정답·독립 해결·힌트 미사용 · [풀이](solutions/leetcode/0054-spiral-matrix/README.md) | [코드](solutions/leetcode/0054-spiral-matrix/Solution.java) |
 | 15 | [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | M | ☐ | ☐ | | 미등록 |
 | 16 | [289. Game of Life](https://leetcode.com/problems/game-of-life/) | M | ☐ | ☐ | | 미등록 |
 | 17 | [59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | M | ☐ | ☐ | | 미등록 |
