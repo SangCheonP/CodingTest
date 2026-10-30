@@ -127,7 +127,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 45 | [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | ✅ | ☐ | 2026-10-27 / 30분 / 정답·힌트 사용·이분탐색 2회로 개선 · [풀이](../../solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/README.md) | [코드](../../solutions/leetcode/0034-find-first-and-last-position-of-element-in-sorted-array/Solution.java) |
 | 46 | [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | ☐ | ☐ | | 미등록 |
 | 47 | [55. Jump Game](https://leetcode.com/problems/jump-game/) | M | ✅ | ☐ | 2026-10-20 / 약 30분 / 정답·힌트 사용 후 그리디로 개선 · [풀이](../../solutions/leetcode/0055-jump-game/README.md) | [코드](../../solutions/leetcode/0055-jump-game/Solution.java) |
-| 48 | [134. Gas Station](https://leetcode.com/problems/gas-station/) | M | ☐ | ☐ | | 미등록 |
+| 48 | [134. Gas Station](https://leetcode.com/problems/gas-station/) | M | ✅ | ☐ | 2026-10-30 / 40분 / 정답·연료 증감 직접 도출·후속 전략 힌트 사용 · [풀이](../../solutions/leetcode/0134-gas-station/README.md) | [코드](../../solutions/leetcode/0134-gas-station/Solution.java) |
 
 <a id="stage-09"></a>
 
