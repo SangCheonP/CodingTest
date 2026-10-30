@@ -16,7 +16,7 @@
 | 기본 4 | [19~24](#stage-04) | [DFS·연결요소](#stage-04) | 2 / 6 |
 | 기본 5 | [25~30](#stage-05) | [BFS·최단거리](#stage-05) | 1 / 6 |
 | 기본 6 | [31~36](#stage-06) | [완전탐색·백트래킹](#stage-06) | 2 / 6 |
-| 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 3 / 6 |
+| 기본 7 | [37~42](#stage-07) | [투포인터·윈도우·누적합](#stage-07) | 4 / 6 |
 | 기본 8 | [43~48](#stage-08) | [이분탐색·그리디](#stage-08) | 3 / 6 |
 | 기본 9 | [49~54](#stage-09) | [힙·위상정렬·유니온파인드](#stage-09) | 4 / 6 |
 | 기본 10 | [55~60](#stage-10) | [가중 그래프·트리](#stage-10) | 3 / 6 |
@@ -124,7 +124,7 @@
 | 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ✅ | ☐ | 2026-10-26 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](solutions/leetcode/0003-longest-substring-without-repeating-characters/README.md) | [코드](solutions/leetcode/0003-longest-substring-without-repeating-characters/Solution.java) |
 | 40 | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | M | ☐ | ☐ | | 미등록 |
 | 41 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·복습 연기 · [풀이](solutions/leetcode/0560-subarray-sum-equals-k/README.md) | [코드](solutions/leetcode/0560-subarray-sum-equals-k/Solution.java) |
-| 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ☐ | ☐ | | 미등록 |
+| 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ✅ | ☐ | 2026-10-30 / 30분 / 정답·누적곱 접근 힌트 사용·추가 공간 O(1) · [풀이](solutions/leetcode/0238-product-of-array-except-self/README.md) | [코드](solutions/leetcode/0238-product-of-array-except-self/Solution.java) |
 
 <a id="stage-08"></a>
 

@@ -114,7 +114,7 @@ E=Easy / M=Medium / H=Hard. 문제 제목 → LeetCode, **코드 열 → Java �
 | 39 | [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | M | ✅ | ☐ | 2026-10-26 / 20분 / 정답·독립 해결·힌트 미사용 · [풀이](../../solutions/leetcode/0003-longest-substring-without-repeating-characters/README.md) | [코드](../../solutions/leetcode/0003-longest-substring-without-repeating-characters/Solution.java) |
 | 40 | [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/) | M | ☐ | ☐ | | 미등록 |
 | 41 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | ✅ | ☐ | 2026-10-21 / 30분 / 정답·힌트 사용·복습 연기 · [풀이](../../solutions/leetcode/0560-subarray-sum-equals-k/README.md) | [코드](../../solutions/leetcode/0560-subarray-sum-equals-k/Solution.java) |
-| 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ☐ | ☐ | | 미등록 |
+| 42 | [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | M | ✅ | ☐ | 2026-10-30 / 30분 / 정답·누적곱 접근 힌트 사용·추가 공간 O(1) · [풀이](../../solutions/leetcode/0238-product-of-array-except-self/README.md) | [코드](../../solutions/leetcode/0238-product-of-array-except-self/Solution.java) |
 
 <a id="stage-08"></a>
 
