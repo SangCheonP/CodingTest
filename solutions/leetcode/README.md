@@ -8,7 +8,7 @@
 
 | 파일 예시 | 역할 |
 |---|---|
-| `0001-two-sum/Solution.java` | LeetCode에 제출한 Java 코드 |
+| `0001-two-sum/Solution.java` | LeetCode 제출 형식의 Java 풀이 코드 |
 | `0001-two-sum/README.md` | 풀이 접근·복잡도·오답·재풀이 기록 |
 
 폴더는 실제로 문제를 풀 때 만듭니다. 각 문제 폴더의 `README.md`는 [풀이 기록 양식](../../templates/solution-note.md)을 복사해 사용합니다. 코드에는 필요한 부분에 한국어 주석을 넣습니다.
